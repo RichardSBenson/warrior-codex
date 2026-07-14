@@ -255,6 +255,44 @@ export const MOVEMENTS = {
         ankle: [52, 92], toe: [58, 93], elbow: [50, 27], hand: [50, 14] },
     ],
   },
+
+  // ── ACCESSORY ──────────────────────────────────────────────
+  bowdraw: {
+    id: "bowdraw",
+    name: "Bow Draw",
+    original: null,
+    culture: "Steppe / English Longbow",
+    evidence: "D",
+    history:
+      "The archer holds the draw while he aims. The English warbow ran well past 100lb, and " +
+      "the skeletons recovered from the Mary Rose show the adaptation plainly — thickened bone " +
+      "and altered shoulders. The Mongol horse-archer made the same demand of his back.",
+    purpose: "Rear delts, mid-back, rotator cuff, rotational core. No equipment.",
+    cues: [
+      "Plank — but hands CLOSE TOGETHER, directly in front of the head. That is your bow arm.",
+      "Draw one elbow back and up until the hand reaches jaw level. Pull with the shoulder blade, not the arm.",
+      "LET THE BODY ROTATE OPEN. The rotation is the draw — it is not a fault, and it is what makes the movement possible from so narrow a base.",
+      "Return under control. The planted arm never moves. Then the other side.",
+    ],
+    video: null,
+    view: "side",
+    trace: "hand",
+    dur: 3000,
+    frames: [
+      { label: "THE BOW ARM", hold: 320,
+        head: [30, 62], neck: [37, 66], hip: [64, 70], knee: [78, 76],
+        ankle: [90, 82], toe: [92, 88], elbow: [30, 74], hand: [26, 86] },
+      { label: "THE DRAW", hold: 0,
+        head: [30, 60], neck: [38, 63], hip: [64, 69], knee: [78, 75],
+        ankle: [90, 82], toe: [92, 88], elbow: [46, 56], hand: [37, 62] },
+      { label: "ANCHOR AT THE JAW", hold: 420,
+        head: [30, 58], neck: [38, 61], hip: [64, 68], knee: [78, 75],
+        ankle: [90, 82], toe: [92, 88], elbow: [54, 48], hand: [35, 56] },
+      { label: "RELEASE", hold: 0,
+        head: [30, 61], neck: [37, 65], hip: [64, 70], knee: [78, 76],
+        ankle: [90, 82], toe: [92, 88], elbow: [40, 66], hand: [30, 76] },
+    ],
+  },
 };
 
 export const getMovement = (id) => MOVEMENTS[id] || null;
