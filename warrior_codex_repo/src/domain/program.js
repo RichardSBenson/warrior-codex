@@ -33,7 +33,7 @@ export const SAMPLE_SESSION = {
     { name: "Clap Push-Up",        sub: "explosive", type: "sets", sets: 3, reps: "6 reps",  rest: 60 },
     { name: "Plank Hold",          sub: "",          type: "hold", sets: 3, seconds: 45, rest: 40 },
     { name: "Shaolin Hollow Hold", sub: "",          type: "hold", sets: 3, seconds: 25, rest: 30 },
-    { name: "Bow Draw Hold",       sub: "each side", type: "holdEach", sets: 2, seconds: 20, rest: 30 },
+    { name: "Bow Draw",            sub: "each side", type: "sets", sets: 3, reps: "8 each side", rest: 40, movementId: "bowdraw" },
   ],
 };
 
