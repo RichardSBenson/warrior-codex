@@ -4,9 +4,10 @@
 // program works with no network and no account.
 // ─────────────────────────────────────────────────────────────
 import recruitToSoldier from '../sources/recruitToSoldier.json';
+import soldierToWarrior from '../sources/soldierToWarrior.json';
 import exercises from '../sources/exercises.json';
 
-const PROGRAMS = { Recruit: recruitToSoldier };
+const PROGRAMS = { Recruit: recruitToSoldier, Soldier: soldierToWarrior };
 
 export const programFor = (rankName) => PROGRAMS[rankName] || null;
 

@@ -493,5 +493,122 @@
   "purpose": "Maximal speed over short distance",
   "frames": null,
   "video": null
+ },
+ {
+  "id": "handstandpushup",
+  "name": "Handstand Push-Up",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Vertical pressing under full bodyweight",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "dragonflag",
+  "name": "Dragon Flag",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Whole-body anterior tension through a long lever",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "typewriter",
+  "name": "Typewriter Pull-Up",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Lateral pulling strength across the bar",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "muscleup",
+  "name": "Muscle-Up",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Pull to press transition over the bar",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "fingerpushup",
+  "name": "Finger Push-Up",
+  "original": "",
+  "culture": "Shaolin conditioning",
+  "purpose": "Digit and tendon strength under load",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "pistol",
+  "name": "Pistol Squat",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Single-leg squat to full depth",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "cossack",
+  "name": "Cossack Squat",
+  "original": "",
+  "culture": "Persian and Central Asian",
+  "purpose": "Deep lateral squat and adductor length",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "kneestrike",
+  "name": "Knee Strike Drill",
+  "original": "",
+  "culture": "Muay boran and pankration",
+  "purpose": "Hip flexion power and balance on one leg",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "frontkick",
+  "name": "Front Kick Drill",
+  "original": "",
+  "culture": "Universal martial",
+  "purpose": "Hip flexion, balance and controlled extension",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "wipers",
+  "name": "Windshield Wipers",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Controlled trunk rotation under load",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "logcarry",
+  "name": "Log Carry",
+  "original": "",
+  "culture": "Roman fortification labour",
+  "purpose": "Awkward front-loaded carriage",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "overheadcarry",
+  "name": "Overhead Carry",
+  "original": "",
+  "culture": "Persian meel tradition",
+  "purpose": "Shoulder stability under load in motion",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "tuckjump",
+  "name": "Tuck Jump",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Repeated vertical power and landing control",
+  "frames": null,
+  "video": null
  }
 ]

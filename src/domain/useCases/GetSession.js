@@ -29,11 +29,11 @@ export function blockForWeek(program, week) {
  * follow and cut a set from every movement — never below one. This is the
  * program protecting the athlete from their own enthusiasm.
  */
-export function taperSession(session) {
+export function taperSession(session, delta = 1) {
   return {
     ...session,
     tapered: true,
-    movements: session.movements.map((m) => ({ ...m, sets: Math.max(1, m.sets - 1) })),
+    movements: session.movements.map((m) => ({ ...m, sets: Math.max(1, m.sets - delta) })),
   };
 }
 
@@ -41,20 +41,41 @@ export function getSession(program, week, day) {
   const block = blockForWeek(program, week);
   if (!block) return null;
 
+  const dress = (base, extra) => ({
+    ...base, week, phase: block.phase, label: block.label,
+    note: block.note || base.note, warmUp: program.warmUp, coolDown: program.coolDown, ...extra,
+  });
+
+  // A taper week borrows the block it follows and cuts sets from every movement.
   if (block.taperFrom) {
-    const source = blockForWeek(program, block.taperFrom[0]);
-    const base = source && source.days.find((d) => d.dayNumber === day);
+    // Resolve through getSession so a taper can follow a block that is itself
+    // a reuse of an earlier one. Chains resolve; they do not return null.
+    const base = getSession(program, block.taperFrom[0], day);
     if (!base) return null;
-    return taperSession({ ...base, week, phase: block.phase, label: block.label,
-                          note: block.note, warmUp: program.warmUp, coolDown: program.coolDown });
+    return taperSession(dress(base), block.setsDelta || 1);
   }
 
-  const found = block.days.find((d) => d.dayNumber === day);
+  // Some blocks the documents describe only as "same structure" as an earlier
+  // one, with the emphasis shifted. They reuse those sessions rather than
+  // inventing prescriptions that were never written down.
+  if (block.sameAs) {
+    const source = blockForWeek(program, block.sameAs[0]);
+    const base = source && (source.days || []).find((d) => d.dayNumber === day);
+    if (!base) return null;
+    return dress(base, { tapered: false, reused: true });
+  }
+
+  let found = (block.days || []).find((d) => d.dayNumber === day);
+
+  // A block may author only some days and fall back for the rest.
+  if (!found && block.fillFrom && (block.fillFromDays || []).includes(day)) {
+    const source = blockForWeek(program, block.fillFrom[0]);
+    const base = source && (source.days || []).find((d) => d.dayNumber === day);
+    if (base) return dress(base, { tapered: false, reused: true });
+  }
   if (!found) return null;
 
-  return { ...found, week, phase: block.phase, label: block.label,
-           note: found.note || block.note, tapered: false,
-           warmUp: program.warmUp, coolDown: program.coolDown };
+  return dress(found, { note: found.note || block.note, tapered: false, reused: false });
 }
 
 /** Everything the training screen needs for today, or a rest day. */
