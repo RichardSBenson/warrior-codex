@@ -1,0 +1,497 @@
+[
+ {
+  "id": "dand",
+  "name": "Hindu Push-Up",
+  "original": "Dand",
+  "culture": "Indian Pehlwani",
+  "purpose": "Pressing endurance, shoulder health, spinal flow",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "pike",
+  "name": "Pike Push-Up",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Overhead pressing strength, shoulder preparation",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "diamond",
+  "name": "Diamond Push-Up",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Triceps and inner chest under close hand position",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "clap",
+  "name": "Clap Push-Up",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Explosive pressing power",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "archer",
+  "name": "Archer Push-Up",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Unilateral pressing strength toward one-arm work",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "plank",
+  "name": "Plank Hold",
+  "original": "",
+  "culture": "Roman legionary",
+  "purpose": "Trunk endurance under isometric load",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "sideplank",
+  "name": "Side Plank",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Lateral trunk stability",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "hollow",
+  "name": "Shaolin Hollow Hold",
+  "original": "",
+  "culture": "Shaolin",
+  "purpose": "Anterior chain tension and body line",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "bowdraw",
+  "name": "Bow Draw Hold",
+  "original": "",
+  "culture": "Mongol horse archery",
+  "purpose": "Scapular retraction and draw endurance",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "invertedrow",
+  "name": "Inverted Row",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Horizontal pulling, the road to the pull-up",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "deadhang",
+  "name": "Dead Hang",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Grip endurance and shoulder decompression",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "chinup",
+  "name": "Chin-Up",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Vertical pulling with supinated grip",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "pullup",
+  "name": "Pull-Up",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Vertical pulling under full bodyweight",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "commando",
+  "name": "Commando Pull-Up",
+  "original": "",
+  "culture": "Military",
+  "purpose": "Mixed-grip pulling and rotational trunk control",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "towelpullup",
+  "name": "Towel Grip Pull-Up",
+  "original": "",
+  "culture": "Akhara rope tradition",
+  "purpose": "Crushing grip under load",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "towelhang",
+  "name": "Towel Grip Dead Hang",
+  "original": "",
+  "culture": "Akhara rope tradition",
+  "purpose": "Grip endurance on an unforgiving surface",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "gripsqueeze",
+  "name": "Grip Squeeze",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Isometric grip for those without a bar",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "bodydrag",
+  "name": "Body Drag",
+  "original": "",
+  "culture": "Ground fighting",
+  "purpose": "Whole-body pulling from the floor, no equipment",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "shieldmarch",
+  "name": "Shield March",
+  "original": "",
+  "culture": "Roman legionary",
+  "purpose": "Loaded carriage over distance",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "bodycarry",
+  "name": "Body Carry",
+  "original": "",
+  "culture": "Norse stone carry",
+  "purpose": "Awkward load carriage",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "baithak",
+  "name": "Hindu Squat",
+  "original": "Baithak",
+  "culture": "Indian Pehlwani",
+  "purpose": "Leg endurance, lactate tolerance, knee resilience",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "forwardlunge",
+  "name": "Forward Lunge",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Split-stance loading and balance",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "walkinglunge",
+  "name": "Walking Lunge",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Single-leg loading in motion",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "laterallunge",
+  "name": "Lateral Lunge",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Frontal plane strength and adductor length",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "elevatedlunge",
+  "name": "Elevated Lunge",
+  "original": "",
+  "culture": "Modern progression",
+  "purpose": "Split-stance strength through greater range",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "jumplunge",
+  "name": "Jump Lunge",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Explosive split-stance power",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "jumpsquat",
+  "name": "Jump Squat",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Lower-body explosive power",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "stepup",
+  "name": "Step-Up",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Single-leg drive against a step",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "calfraise",
+  "name": "Single-Leg Calf Raise",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Achilles and calf resilience for the baithak",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "duckwalk",
+  "name": "Duck Walk",
+  "original": "",
+  "culture": "Shaolin stance work",
+  "purpose": "Deep squat endurance under travel",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "horse",
+  "name": "Horse Stance",
+  "original": "Mabu",
+  "culture": "Shaolin",
+  "purpose": "Isometric leg endurance and structure",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "run",
+  "name": "Run",
+  "original": "",
+  "culture": "Roman iter militare",
+  "purpose": "Aerobic base and sustained pace",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "bearcrawl",
+  "name": "Bear Crawl",
+  "original": "",
+  "culture": "Animal locomotion",
+  "purpose": "Contralateral ground travel, shoulder endurance",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "leopardcrawl",
+  "name": "Leopard Crawl",
+  "original": "",
+  "culture": "Military low crawl",
+  "purpose": "Low ground travel under fatigue",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "crabwalk",
+  "name": "Crab Walk",
+  "original": "",
+  "culture": "Animal locomotion",
+  "purpose": "Posterior chain and shoulder extension under travel",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "retreatcrawl",
+  "name": "Wounded Retreat Crawl",
+  "original": "",
+  "culture": "Military",
+  "purpose": "Ground travel when one limb is unavailable",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "hipescape",
+  "name": "Hip Escape",
+  "original": "Shrimp",
+  "culture": "Ground wrestling",
+  "purpose": "Hip mobility and floor escape mechanics",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "groundwork",
+  "name": "Grappling Ground Drill",
+  "original": "",
+  "culture": "Malla-yuddha",
+  "purpose": "Continuous ground movement under fatigue",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "burpee",
+  "name": "Hindu Burpee",
+  "original": "Sapate",
+  "culture": "Indian Pehlwani",
+  "purpose": "Whole-body conditioning at pace",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "surya",
+  "name": "Surya Namaskar",
+  "original": "",
+  "culture": "Indian",
+  "purpose": "Mobility, breath control, warm-up sequence",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "hiphinge",
+  "name": "Hip Hinge",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "The hinge pattern, taught before it is loaded",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "glutebridge",
+  "name": "Glute Bridge",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Posterior chain under short range",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "slglutebridge",
+  "name": "Single-Leg Glute Bridge",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Unilateral posterior chain",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "balancelift",
+  "name": "Single-Leg Balance Lift",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Single-leg hinge with balance demand",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "stonelift",
+  "name": "Stone Lift",
+  "original": "",
+  "culture": "Norse and Icelandic",
+  "purpose": "Whole-body lifting of an awkward object",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "stonethrow",
+  "name": "Stone Throw",
+  "original": "",
+  "culture": "Greek and Norse",
+  "purpose": "Rotational power expressed outward",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "javelin",
+  "name": "Javelin Throw Rotation",
+  "original": "",
+  "culture": "Greek pentathlon",
+  "purpose": "Rotational sequencing without a load",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "axechop",
+  "name": "Axe Chop",
+  "original": "",
+  "culture": "Norse",
+  "purpose": "Diagonal rotational power",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "gada",
+  "name": "Gada Swing",
+  "original": "",
+  "culture": "Indian Akhara",
+  "purpose": "Shoulder durability and rotational strength",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "sprawl",
+  "name": "Wrestler's Sprawl",
+  "original": "",
+  "culture": "Wrestling universal",
+  "purpose": "Explosive hip drop from standing",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "broadjump",
+  "name": "Broad Jump",
+  "original": "",
+  "culture": "Greek athletics",
+  "purpose": "Horizontal explosive power",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "verticalleap",
+  "name": "Vertical Leap",
+  "original": "",
+  "culture": "Universal",
+  "purpose": "Vertical explosive power",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "vaultjump",
+  "name": "Vault Jump",
+  "original": "",
+  "culture": "Military obstacle",
+  "purpose": "Clearing an obstacle under control",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "bounding",
+  "name": "Bounding Run",
+  "original": "",
+  "culture": "Athletics",
+  "purpose": "Elastic stride power",
+  "frames": null,
+  "video": null
+ },
+ {
+  "id": "sprint",
+  "name": "War Sprint",
+  "original": "",
+  "culture": "Zulu regimental running",
+  "purpose": "Maximal speed over short distance",
+  "frames": null,
+  "video": null
+ }
+]

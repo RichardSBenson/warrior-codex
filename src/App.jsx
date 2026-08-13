@@ -17,12 +17,13 @@ import { useState, useEffect, useCallback } from "react";
 import { storage } from "./data/repositories/LocalStorageRepository.js";
 import { CORE_TESTS } from "./domain/entities/Trial.js";
 import { RANKS } from "./domain/entities/Rank.js";
-import { SAMPLE_SESSION } from "./domain/entities/Program.js";
+import { programFor } from "./data/repositories/LocalProgramRepository.js";
+import { todaysSession } from "./domain/useCases/GetSession.js";
 import { emptyRecord, addSession, addOrderHeld } from "./domain/entities/Record.js";
 import { defaultOrders, toggleOrder, ordersHeldToday } from "./domain/entities/StandingOrder.js";
 import { roomComplete, overallRank, theWall } from "./domain/useCases/ScoreAssessment.js";
 
-import { BLACK, LIGHT } from "./design/uiKit.js";
+import { BLACK, LIGHT, GRAY, LINE } from "./design/uiKit.js";
 import {
   SplashScreen, TestListScreen, TestScreen, ResultsScreen,
 } from "./presentation/screens/AssessmentScreens.jsx";
@@ -43,6 +44,10 @@ export default function App() {
   const [current, setCurrent] = useState(0);
 
   const rankName = RANKS[overallRank(results)];
+
+  // Today's prescribed session, from the program for your current rank.
+  // No program for that rank yet, or a seventh day — both come back as rest.
+  const session = todaysSession(programFor(rankName), startDate);
 
   // persist results as they come in
   useEffect(() => { storage.saveResults(results); }, [results]);
@@ -159,11 +164,29 @@ export default function App() {
         }} />
       )}
 
-      {screen === "session" && (
+      {screen === "session" && !session.rest && (
         <SessionScreen
-          session={SAMPLE_SESSION}
+          session={{ ...session, rank: rankName }}
           onBack={() => setScreen("profile")}
           onComplete={completeSession} />
+      )}
+
+      {screen === "session" && session.rest && (
+        <div style={{ padding: 32, textAlign: "center", color: LIGHT }}>
+          <div style={{ fontSize: 12, letterSpacing: "0.3em", color: GRAY, marginBottom: 12 }}>
+            WEEK {session.week} &middot; DAY {session.dayNumber}
+          </div>
+          <h2 style={{ fontSize: 26, letterSpacing: "0.1em", marginBottom: 16 }}>REST</h2>
+          <p style={{ color: GRAY, maxWidth: 320, margin: "0 auto 28px", lineHeight: 1.6 }}>
+            Complete rest, or gentle Surya Namaskar &mdash; five rounds only.
+            Recovery is where strength is built.
+          </p>
+          <button onClick={() => setScreen("profile")}
+            style={{ border: `1px solid ${LINE}`, color: LIGHT, padding: "12px 28px",
+                     minHeight: 44, letterSpacing: "0.14em", background: "none" }}>
+            BACK
+          </button>
+        </div>
       )}
 
       {screen === "orders" && (
