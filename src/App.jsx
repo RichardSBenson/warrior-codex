@@ -48,7 +48,13 @@ export default function App() {
   const [screen, setScreen] = useState(
     devLanding ? "manuscript" : hasStanding ? "profile" : "splash");
 
-  // The Proving Ground: a test harness, off unless switched on with ?dev=1.
+  // ── ADMIN MODE ───────────────────────────────────────────
+  // On by default while the Codex is being built and proofed. Set this to
+  // false before the first real warrior sees the app, and the bar, the
+  // Proving Ground and the Manuscript all disappear with it.
+  const ADMIN_BY_DEFAULT = true;
+
+  // The Proving Ground: on by default above, or switched on with ?dev=1.
   const [dev, setDev] = useState(() => {
     // ?dev=1 enables the test harness, then the parameter is stripped from the
     // URL and history so a link cannot be forwarded to switch it on for someone
@@ -60,7 +66,11 @@ export default function App() {
       url.searchParams.delete("dev");
       window.history.replaceState({}, "", url.pathname + url.search + url.hash);
     }
-    return storage.loadDev();
+    if (url.searchParams.get("dev") === "0") {
+      storage.saveDev(null);
+      return null;
+    }
+    return storage.loadDev() || (ADMIN_BY_DEFAULT ? { enabled: true, override: null } : null);
   });
   const setOverride = (override) => {
     const next = { enabled: true, override };
@@ -284,6 +294,18 @@ export default function App() {
             style={{ minHeight: 46, padding: "0 10px", background: "none", color: GOLD,
               border: "none", borderLeft: `1px solid #2a2a2a`,
               fontFamily: "'Cinzel',serif", fontSize: "0.58rem", letterSpacing: "0.1em" }}>JUMP</button>
+
+          <button onClick={() => {
+              storage.clearAll(); setResults({}); setStart(null);
+              setRecord(emptyRecord()); setOrders(null); setGround(null);
+              setHeld(ordersHeldToday(null)); setCurrent(0);
+              storage.saveDev({ enabled: true, override: null });
+              setDev({ enabled: true, override: null });
+              setScreen("splash");
+            }}
+            style={{ minHeight: 46, padding: "0 10px", background: "none", color: "#B98F8F",
+              border: "none", borderLeft: `1px solid #2a2a2a`,
+              fontFamily: "'Cinzel',serif", fontSize: "0.58rem", letterSpacing: "0.1em" }}>WIPE</button>
 
           <button onClick={() => stepPage(1)}
             style={{ minHeight: 46, padding: "0 14px", background: GOLD, color: BLACK, border: "none",

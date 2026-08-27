@@ -110,3 +110,41 @@ describe('the skip bar walks every page', () => {
     expect(container.textContent.length).toBeGreaterThan(20);
   });
 });
+
+describe('admin mode is on without asking', () => {
+  it('shows the bar on a fresh install with no dev flag stored', () => {
+    localStorage.clear();
+    const { container } = render(<App />);
+    expect(container.querySelector('[data-page]')).not.toBeNull();
+  });
+
+  it('turns off with ?dev=0', () => {
+    localStorage.clear();
+    window.history.replaceState({}, '', '/?dev=0');
+    const { container } = render(<App />);
+    expect(container.querySelector('[data-page]')).toBeNull();
+    window.history.replaceState({}, '', '/');
+  });
+});
+
+describe('corrupt stored values cannot break a screen', () => {
+  it('survives ids stored where scores belong, as an old build wrote them', () => {
+    localStorage.clear();
+    const bad = Object.fromEntries(['dand', 'baithak', 'horse', 'plank', 'fingertip',
+      'pullups', 'deadhang', 'run', 'broadjump', 'bearcrawl'].map((id) => [id, id]));
+    localStorage.setItem('codex_assessment_v1', JSON.stringify(bad));
+    localStorage.setItem('codex_start_v1', JSON.stringify(new Date(Date.now() - 7 * 86400000).toISOString()));
+    const { container } = render(<App />);
+    expect(container.textContent).not.toMatch(/broadjump|bearcrawls|deadhangs/);
+    expect(container.textContent.length).toBeGreaterThan(20);
+  });
+
+  it('wipes bad data in one tap and returns to the splash', () => {
+    localStorage.clear();
+    localStorage.setItem('codex_assessment_v1', JSON.stringify({ dand: 'dand' }));
+    const { container, getByText } = render(<App />);
+    fireEvent.click(getByText('WIPE'));
+    expect(container.querySelector('[data-page]').getAttribute('data-page')).toBe('splash');
+    expect(JSON.parse(localStorage.getItem('codex_assessment_v1') || '{}')).toEqual({});
+  });
+});
