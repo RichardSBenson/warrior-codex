@@ -26,6 +26,6 @@ export default defineConfig({
   ],
   test: {
     environment: 'node',
-    include: ['src/**/__tests__/**/*.test.js'],
+    include: ['src/**/__tests__/**/*.test.js', 'src/**/__smoke__/**/*.test.jsx'],
   },
 });

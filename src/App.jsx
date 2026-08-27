@@ -21,6 +21,7 @@ import { programFor } from "./data/repositories/LocalProgramRepository.js";
 import { todaysSession } from "./domain/useCases/GetSession.js";
 import ProvingGround from "./presentation/screens/ProvingGround.jsx";
 import Manuscript from "./presentation/screens/Manuscript.jsx";
+import { resultsAtRank, startDateForWeek } from "./domain/useCases/SeedStanding.js";
 import { emptyRecord, addSession, addOrderHeld } from "./domain/entities/Record.js";
 import { defaultOrders, toggleOrder, ordersHeldToday } from "./domain/entities/StandingOrder.js";
 import { roomComplete, overallRank, theWall } from "./domain/useCases/ScoreAssessment.js";
@@ -42,7 +43,10 @@ export default function App() {
   const [held, setHeld]       = useState(() => ordersHeldToday(storage.loadHeld()));
 
   const hasStanding = roomComplete(results);
-  const [screen, setScreen]   = useState(hasStanding ? "profile" : "splash");
+  const devLanding = typeof window !== "undefined"
+    && new URLSearchParams(window.location.search).get("dev") === "1";
+  const [screen, setScreen] = useState(
+    devLanding ? "manuscript" : hasStanding ? "profile" : "splash");
 
   // The Proving Ground: a test harness, off unless switched on with ?dev=1.
   const [dev, setDev] = useState(() => {
@@ -237,13 +241,27 @@ export default function App() {
       )}
 
       {dev?.enabled && screen !== "proving" && screen !== "manuscript" && (
-        <button
-          onClick={() => setScreen("proving")}
-          style={{ position: "fixed", right: 12, bottom: 12, zIndex: 50, minHeight: 44, minWidth: 44,
-                   padding: "8px 14px", background: BLACK, color: GOLD, border: `1px solid ${GOLD}`,
-                   fontFamily: "'Cinzel',serif", fontSize: "0.68rem", letterSpacing: "0.12em" }}>
-          {dev.override ? `W${dev.override.week} D${dev.override.day}` : "PROVING"}
-        </button>
+        <div style={{ position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 9999,
+          display: "flex", background: BLACK, borderTop: `1px solid ${GOLD}` }}>
+          {[
+            ["MANUSCRIPT", () => setScreen("manuscript")],
+            [dev.override ? `W${dev.override.week} D${dev.override.day}` : "PROVING",
+              () => setScreen("proving")],
+            ["SKIP TRIALS", () => {
+              const seeded = resultsAtRank("Recruit");
+              setResults(seeded); storage.saveResults(seeded);
+              const iso = startDateForWeek(1);
+              setStart(iso); storage.saveStart(iso);
+              setScreen("profile");
+            }],
+          ].map(([text, act]) => (
+            <button key={text} onClick={act} style={{ flex: 1, minHeight: 46, background: "none",
+              color: GOLD, border: "none", borderRight: `1px solid #2a2a2a`,
+              fontFamily: "'Cinzel',serif", fontSize: "0.62rem", letterSpacing: "0.1em" }}>
+              {text}
+            </button>
+          ))}
+        </div>
       )}
 
       {screen === "orders" && (
