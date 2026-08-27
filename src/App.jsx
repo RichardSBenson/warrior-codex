@@ -68,6 +68,26 @@ export default function App() {
   };
   const [current, setCurrent] = useState(0);
 
+  // ── admin: step through every page in order ──────────────
+  // Ten screens, walked one tap at a time. On the trial screen the step moves
+  // to the next trial instead, recording a Recruit-standard value on the way
+  // so the assessment fills itself in behind you.
+  const PAGES = ["splash", "list", "test", "results", "profile", "ground",
+                 "session", "orders", "proving", "manuscript"];
+
+  const stepPage = (delta) => {
+    if (screen === "test" && delta > 0 && current < CORE_TESTS.length - 1) {
+      const t = CORE_TESTS[current];
+      setResults((r) => ({ ...r, [t.id]: r[t.id] ?? t.thresholds[0] }));
+      setCurrent((c) => c + 1);
+      return;
+    }
+    const i = PAGES.indexOf(screen);
+    const next = PAGES[(i < 0 ? 0 : i + delta + PAGES.length) % PAGES.length];
+    if (next === "test") setCurrent(0);
+    setScreen(next);
+  };
+
   const rankName = RANKS[overallRank(results)];
 
   // Today's prescribed session, from the program for your current rank.
@@ -240,27 +260,35 @@ export default function App() {
         <Manuscript onBack={() => setScreen("proving")} />
       )}
 
-      {dev?.enabled && screen !== "proving" && screen !== "manuscript" && (
-        <div style={{ position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 9999,
-          display: "flex", background: BLACK, borderTop: `1px solid ${GOLD}` }}>
-          {[
-            ["MANUSCRIPT", () => setScreen("manuscript")],
-            [dev.override ? `W${dev.override.week} D${dev.override.day}` : "PROVING",
-              () => setScreen("proving")],
-            ["SKIP TRIALS", () => {
-              const seeded = resultsAtRank("Recruit");
-              setResults(seeded); storage.saveResults(seeded);
-              const iso = startDateForWeek(1);
-              setStart(iso); storage.saveStart(iso);
-              setScreen("profile");
-            }],
-          ].map(([text, act]) => (
-            <button key={text} onClick={act} style={{ flex: 1, minHeight: 46, background: "none",
-              color: GOLD, border: "none", borderRight: `1px solid #2a2a2a`,
-              fontFamily: "'Cinzel',serif", fontSize: "0.62rem", letterSpacing: "0.1em" }}>
-              {text}
-            </button>
-          ))}
+      {dev?.enabled && (
+        <div data-page={screen}
+          style={{ position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 9999,
+          display: "flex", alignItems: "stretch", background: BLACK, borderTop: `1px solid ${GOLD}` }}>
+          <button onClick={() => stepPage(-1)} aria-label="Previous page"
+            style={{ minHeight: 46, width: 46, background: "none", color: GOLD, border: "none",
+              borderRight: `1px solid #2a2a2a`, fontSize: "1rem" }}>◀</button>
+
+          <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center",
+            color: GRAY, fontFamily: "'Cinzel',serif", fontSize: "0.58rem", letterSpacing: "0.16em" }}>
+            {screen.toUpperCase()}
+            {screen === "test" && ` ${current + 1}/${CORE_TESTS.length}`}
+            {dev.override && ` · W${dev.override.week} D${dev.override.day}`}
+          </div>
+
+          <button onClick={() => setScreen("manuscript")}
+            style={{ minHeight: 46, padding: "0 10px", background: "none", color: GOLD,
+              border: "none", borderLeft: `1px solid #2a2a2a`,
+              fontFamily: "'Cinzel',serif", fontSize: "0.58rem", letterSpacing: "0.1em" }}>ALL</button>
+
+          <button onClick={() => setScreen("proving")}
+            style={{ minHeight: 46, padding: "0 10px", background: "none", color: GOLD,
+              border: "none", borderLeft: `1px solid #2a2a2a`,
+              fontFamily: "'Cinzel',serif", fontSize: "0.58rem", letterSpacing: "0.1em" }}>JUMP</button>
+
+          <button onClick={() => stepPage(1)}
+            style={{ minHeight: 46, padding: "0 14px", background: GOLD, color: BLACK, border: "none",
+              fontFamily: "'Cinzel',serif", fontSize: "0.6rem", letterSpacing: "0.12em",
+              fontWeight: "bold" }}>SKIP ▶</button>
         </div>
       )}
 
