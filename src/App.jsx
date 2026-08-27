@@ -218,6 +218,16 @@ export default function App() {
           setOverride={setOverride}
           onOpenSession={() => setScreen("session")}
           onReview={() => setScreen("manuscript")}
+          onSeed={(seeded, iso) => {
+            setResults(seeded); storage.saveResults(seeded);
+            setStart(iso); storage.saveStart(iso);
+            setScreen("profile");
+          }}
+          onWipe={() => {
+            storage.clearAll(); setResults({}); setStart(null);
+            setRecord(emptyRecord()); setHeld(ordersHeldToday(null));
+            setOverride(null); setScreen("splash");
+          }}
           onBack={() => setScreen("profile")}
           onDisable={() => { storage.saveDev(null); setDev(null); setScreen("profile"); }} />
       )}

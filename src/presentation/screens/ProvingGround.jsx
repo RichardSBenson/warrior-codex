@@ -2,6 +2,7 @@ import { useState } from "react";
 import { RANKS } from "../../domain/entities/Rank.js";
 import { programFor } from "../../data/repositories/LocalProgramRepository.js";
 import { getSession, blockForWeek, totalSets } from "../../domain/useCases/GetSession.js";
+import { resultsAtRank, startDateForWeek } from "../../domain/useCases/SeedStanding.js";
 import { BLACK, PANEL, GOLD, DARK_GOLD, LIGHT, GRAY, LINE } from "../../design/uiKit.js";
 
 const DAY_NAMES = ["", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -24,7 +25,7 @@ const btn = (active) => ({
  *
  * Reached with ?dev=1 and switched off from inside. Invisible otherwise.
  */
-export function ProvingGround({ override, setOverride, onOpenSession, onReview, onBack, onDisable }) {
+export function ProvingGround({ override, setOverride, onOpenSession, onReview, onSeed, onWipe, onBack, onDisable }) {
   const [rank, setRank] = useState(override?.rank || "Recruit");
   const [week, setWeek] = useState(override?.week || 1);
   const [day, setDay] = useState(override?.day || 1);
@@ -134,6 +135,24 @@ export function ProvingGround({ override, setOverride, onOpenSession, onReview, 
           )}
         </>
       )}
+
+      <div style={{ borderTop: `1px solid ${LINE}`, margin: "6px 0 16px", paddingTop: 16 }}>
+        <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", color: DARK_GOLD, marginBottom: 6 }}>
+          SKIP THE ASSESSMENT
+        </div>
+        <p style={{ color: GRAY, fontSize: "0.82rem", lineHeight: 1.5, marginTop: 0, marginBottom: 10 }}>
+          Writes every trial at {rank} standard and starts you in week {week}. It is a
+          shortcut past ten trials, not a rank — nothing here is verified.
+        </p>
+        <button style={{ ...btn(true), width: "100%", marginBottom: 8 }}
+          onClick={() => onSeed(resultsAtRank(rank), startDateForWeek(week))}>
+          STAND ME AT {rank.toUpperCase()}, WEEK {week}
+        </button>
+        <button style={{ ...btn(false), width: "100%", color: "#B98F8F", borderColor: "#5a3030" }}
+          onClick={onWipe}>
+          WIPE EVERYTHING AND START OVER
+        </button>
+      </div>
 
       <button style={{ ...btn(false), width: "100%", marginBottom: 10 }} onClick={onReview}>
         READ THE MANUSCRIPT
