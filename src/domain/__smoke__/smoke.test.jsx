@@ -1,6 +1,8 @@
 // @vitest-environment jsdom
-import { describe, it, expect } from 'vitest';
-import { render } from '@testing-library/react';
+import { describe, it, expect, afterEach } from 'vitest';
+import { render, cleanup } from '@testing-library/react';
+
+afterEach(cleanup);
 import { SplashScreen, TestListScreen, TestScreen, ResultsScreen } from '../../presentation/screens/AssessmentScreens.jsx';
 import { SessionScreen } from '../../presentation/screens/TrainingScreens.jsx';
 import ProvingGround from '../../presentation/screens/ProvingGround.jsx';

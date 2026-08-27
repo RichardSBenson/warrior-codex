@@ -19,6 +19,32 @@ import { TRIAL_MOVEMENT, getMovement } from "../../domain/entities/Movement.js";
 
 // ═══ UI · THE ASSESSMENT FLOW ═══
 
+
+// ── shared control styles for the trial screen ──────────────
+// Counter buttons are deliberately large: they are tapped mid-set with a
+// heart rate of 170 and no attention to spare. 72px, well past the 44px floor.
+const cBtn = (primary) => ({
+  minWidth: 72, minHeight: 72, borderRadius: 999,
+  background: primary ? GOLD : "transparent",
+  color: primary ? BLACK : LIGHT,
+  border: `1px solid ${primary ? GOLD : LINE}`,
+  fontFamily: "'Cinzel',serif", fontSize: primary ? "1.5rem" : "1.8rem",
+  lineHeight: 1, cursor: "pointer",
+});
+
+const doneBtn = {
+  marginTop: 30, minHeight: 48, padding: "14px 44px",
+  background: "transparent", color: LIGHT, border: `1px solid ${LINE}`,
+  fontFamily: "'Cinzel',serif", fontSize: "0.75rem", letterSpacing: "0.2em",
+  cursor: "pointer", borderRadius: 4,
+};
+
+const inp = {
+  width: 110, minHeight: 56, padding: "12px 14px", textAlign: "center",
+  background: PANEL, color: LIGHT, border: `1px solid ${LINE}`, borderRadius: 4,
+  fontFamily: "'Cinzel',serif", fontSize: "1.4rem",
+};
+
 export function SplashScreen({ onStart }) {
   const [show, setShow] = useState(false);
   useEffect(() => { const t = setTimeout(() => setShow(true), 60); return () => clearTimeout(t); }, []);
@@ -184,7 +210,6 @@ export function TestScreen({ test, index, onComplete, onBack, mode = "assessment
         setElapsed(e);
       }
     }, 100);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [test, reps]);
 
   function stopHold() {
