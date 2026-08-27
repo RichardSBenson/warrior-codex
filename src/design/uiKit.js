@@ -11,18 +11,28 @@ export const { BLACK, PANEL, GOLD, DARK_GOLD, LIGHT, GRAY, LINE } = colours;
 
 /** seconds -> m:ss */
 export function fmt(sec) {
-  const s = Math.max(0, Math.floor(sec));
+  const n = typeof sec === "number" ? sec : Number(sec);
+  const s = Number.isFinite(n) ? Math.max(0, Math.floor(n)) : 0;
   const m = Math.floor(s / 60);
   const r = s % 60;
   return m > 0 ? `${m}:${String(r).padStart(2, "0")}` : `${r}s`;
 }
 
-/** a trial result, in the units a human reads */
+/**
+ * A trial result, in the units a human reads.
+ *
+ * Deliberately forgiving. A stored value that is not a number must never be
+ * the thing that takes a screen down — it renders as an em dash and the rest
+ * of the page survives.
+ */
 export function displayValue(trial, value) {
-  if (value === undefined || value === null) return "—";
-  if (trial.type === "secs") return fmt(value);
-  if (trial.type === "dist") return `${value.toFixed(2)}m`;
-  return `${value} ${trial.unit}`;
+  if (value === undefined || value === null || value === "") return "—";
+  const n = typeof value === "number" ? value : Number(value);
+  if (!Number.isFinite(n)) return "—";
+  if (!trial || !trial.type) return String(value);
+  if (trial.type === "secs") return fmt(n);
+  if (trial.type === "dist") return `${n.toFixed(2)}m`;
+  return `${n} ${trial.unit || ""}`.trim();
 }
 
 export const btn = {

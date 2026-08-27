@@ -189,10 +189,10 @@ export function TestScreen({ test, index, onComplete, onBack, mode = "assessment
   const timerRef = useRef(null);
 
   const isReps = test.type === "reps";
-  const isHold = test.type === "hold";
-  const isRunTime = test.type === "runtime";
+  const isHold = test.type === "hold";   // reserved: no trial uses it today
+  const isRunTime = test.id === "run";
   const isSecs = test.type === "secs";
-  const isDistance = test.type === "distance";
+  const isDistance = test.type === "dist";
   const capped = test.timeCap != null;
 
   useEffect(() => () => clearInterval(timerRef.current), []);
@@ -392,7 +392,7 @@ export function TestScreen({ test, index, onComplete, onBack, mode = "assessment
               if (isRunTime) v = (Number(entryMin) || 0) * 60 + (Number(entrySec) || 0);
               else v = Number(entry);
               if (!v && v !== 0) return;
-              onComplete(test.id, isDistance ? v : Math.round(v * (isDistance ? 1 : 1)));
+              onComplete(test.id, isDistance ? Math.round(v * 100) / 100 : Math.round(v));
             }} style={{ marginTop: 24, background: GOLD, color: BLACK, border: "none",
               padding: "14px 44px", fontSize: "0.8rem", letterSpacing: "0.2em",
               fontFamily: "'Cinzel',serif", fontWeight: "bold", cursor: "pointer", borderRadius: 4 }}>

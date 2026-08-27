@@ -12,7 +12,10 @@ import { makeOrder, ORDERS_CREED } from "../../domain/entities/StandingOrder.js"
 // The Codex issues orders by rank; the warrior may rewrite them. They are his.
 // Held or not held. No streak. No debt. Each one held is a mark on the Record.
 // ─────────────────────────────────────────────────────────────
-export default function OrdersScreen({ orders, held, rank, onToggle, onSave, onBack }) {
+export default function OrdersScreen({ orders: given, held, rank, onToggle, onSave, onBack }) {
+  // Orders are null until the Wall has been worked out. Treat that as none,
+  // never as a crash.
+  const orders = Array.isArray(given) ? given : [];
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState(orders);
 
