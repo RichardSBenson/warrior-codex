@@ -6,6 +6,7 @@
  "sessionsPerWeek": 6,
  "warmUp": "6 minutes Surya Namaskar, then 4 minutes dynamic stretching. Cold training risks weeks of progress.",
  "coolDown": "4 minutes static stretching, then 2 minutes controlled breathing.",
+ "source": "warrior_codex_soldier_to_warrior_16week \u2014 parsed, not transcribed",
  "blocks": [
   {
    "weeks": [
@@ -14,8 +15,7 @@
    ],
    "phase": "Rebuild",
    "label": "New Movement Introduction",
-   "intensity": "65-75%",
-   "note": "The movements are harder now. Learn them properly before adding speed.",
+   "note": "Your body adapts to a new level. Build volume toward Warrior targets with warrior-strength movements. Learn them properly before adding speed.",
    "days": [
     {
      "dayNumber": 1,
@@ -29,8 +29,8 @@
        "sub": "Dand",
        "type": "sets",
        "sets": 4,
-       "reps": "12 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "12 reps"
       },
       {
        "movementId": "archer",
@@ -38,8 +38,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "4 each side",
-       "rest": 60
+       "rest": 60,
+       "reps": "4 each side"
       },
       {
        "movementId": "pike",
@@ -47,8 +47,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "10 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "10 reps"
       },
       {
        "movementId": "clap",
@@ -56,8 +56,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "5 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "5 reps"
       },
       {
        "movementId": "plank",
@@ -65,8 +65,8 @@
        "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 60,
-       "rest": 45
+       "rest": 45,
+       "seconds": 60
       },
       {
        "movementId": "hollow",
@@ -74,8 +74,8 @@
        "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 20,
-       "rest": 30
+       "rest": 30,
+       "seconds": 20
       },
       {
        "movementId": "dragonflag",
@@ -83,8 +83,8 @@
        "sub": "negatives",
        "type": "sets",
        "sets": 3,
-       "reps": "3 reps \u2014 slow lower",
-       "rest": 60
+       "rest": 60,
+       "reps": "3 reps (slow lower)"
       }
      ]
     },
@@ -100,8 +100,8 @@
        "sub": "",
        "type": "sets",
        "sets": 5,
-       "reps": "5 reps",
-       "rest": 75
+       "rest": 75,
+       "reps": "5 reps"
       },
       {
        "movementId": "chinup",
@@ -109,17 +109,17 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "5 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "5 reps"
       },
       {
-       "movementId": "commando",
-       "name": "Commando Pull-Up",
+       "movementId": "invertedrow",
+       "name": "Inverted Row",
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "3 each grip",
-       "rest": 75
+       "rest": 60,
+       "reps": "12 reps"
       },
       {
        "movementId": "deadhang",
@@ -127,8 +127,8 @@
        "sub": "",
        "type": "hold",
        "sets": 4,
-       "seconds": 30,
-       "rest": 45
+       "rest": 45,
+       "seconds": 30
       },
       {
        "movementId": "towelpullup",
@@ -136,8 +136,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "3 reps",
-       "rest": 75
+       "rest": 75,
+       "reps": "3 reps"
       },
       {
        "movementId": "shieldmarch",
@@ -145,8 +145,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "50m brisk pace",
-       "rest": 75
+       "rest": 75,
+       "reps": "Brisk pace"
       },
       {
        "movementId": "bodycarry",
@@ -154,8 +154,8 @@
        "sub": "",
        "type": "sets",
        "sets": 2,
-       "reps": "25m walking pace",
-       "rest": 90
+       "rest": 90,
+       "reps": "Walking pace"
       }
      ]
     },
@@ -171,8 +171,8 @@
        "sub": "Baithak",
        "type": "sets",
        "sets": 4,
-       "reps": "20 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "20 reps"
       },
       {
        "movementId": "cossack",
@@ -180,8 +180,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "6 each side",
-       "rest": 60
+       "rest": 60,
+       "reps": "6 each side"
       },
       {
        "movementId": "jumpsquat",
@@ -189,8 +189,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "10 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "10 reps"
       },
       {
        "movementId": "jumplunge",
@@ -198,8 +198,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "8 each leg",
-       "rest": 60
+       "rest": 60,
+       "reps": "8 each leg"
       },
       {
        "movementId": "elevatedlunge",
@@ -207,8 +207,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "8 each leg",
-       "rest": 60
+       "rest": 60,
+       "reps": "8 each leg"
       },
       {
        "movementId": "horse",
@@ -216,17 +216,17 @@
        "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 30,
-       "rest": 45
+       "rest": 45,
+       "seconds": 30
       },
       {
        "movementId": "run",
-       "name": "2km Run",
+       "name": "Run",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 11:30",
-       "rest": 0
+       "rest": 0,
+       "reps": "2km target: 11:30"
       }
      ]
     },
@@ -242,8 +242,8 @@
        "sub": "Sapate",
        "type": "sets",
        "sets": 4,
-       "reps": "8 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "8 reps"
       },
       {
        "movementId": "bearcrawl",
@@ -251,8 +251,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "20m fast pace",
-       "rest": 50
+       "rest": 50,
+       "reps": "Fast pace"
       },
       {
        "movementId": "leopardcrawl",
@@ -260,8 +260,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "15m controlled",
-       "rest": 60
+       "rest": 60,
+       "reps": "Controlled"
       },
       {
        "movementId": "crabwalk",
@@ -269,8 +269,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "15m fast",
-       "rest": 45
+       "rest": 45,
+       "reps": "Fast"
       },
       {
        "movementId": "groundwork",
@@ -278,8 +278,8 @@
        "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 45,
-       "rest": 60
+       "rest": 60,
+       "seconds": 45
       },
       {
        "movementId": "hipescape",
@@ -287,8 +287,8 @@
        "sub": "Shrimp",
        "type": "sets",
        "sets": 3,
-       "reps": "8 each side",
-       "rest": 45
+       "rest": 45,
+       "reps": "8 each side"
       }
      ]
     },
@@ -304,8 +304,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "10 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "10 reps"
       },
       {
        "movementId": "sprawl",
@@ -313,8 +313,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "8 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "8 reps"
       },
       {
        "movementId": "slglutebridge",
@@ -322,17 +322,17 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "10 each",
-       "rest": 45
+       "rest": 45,
+       "reps": "10 each"
       },
       {
        "movementId": "broadjump",
        "name": "Broad Jump",
-       "sub": "",
+       "sub": "max",
        "type": "sets",
        "sets": 5,
-       "reps": "3 attempts \u2014 max",
-       "rest": 60
+       "rest": 60,
+       "reps": "3 attempts"
       },
       {
        "movementId": "gada",
@@ -340,8 +340,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "12 each direction",
-       "rest": 50
+       "rest": 50,
+       "reps": "12 each direction"
       },
       {
        "movementId": "tuckjump",
@@ -349,17 +349,17 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "6 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "6 reps"
       },
       {
        "movementId": "sprint",
-       "name": "War Sprint",
+       "name": "Sprint",
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "50m full speed",
-       "rest": 90
+       "rest": 90,
+       "reps": "Full speed"
       }
      ]
     },
@@ -367,52 +367,52 @@
      "dayNumber": 6,
      "dayName": "GAMES",
      "focus": "Baseline Test",
-     "note": "Your Soldier-level baseline for the Warrior journey.",
+     "note": "",
      "movements": [
       {
        "movementId": "dand",
        "name": "Hindu Push-Up",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 5 min \u2014 target 30+",
-       "rest": 180
+       "sets": 5,
+       "rest": 180,
+       "reps": "min 1 Target: 30+"
       },
       {
        "movementId": "pullup",
-       "name": "Pull-Up",
+       "name": "Pull-Ups",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 2 min \u2014 target 6+",
-       "rest": 180
+       "sets": 2,
+       "rest": 180,
+       "reps": "min 1 Target: 6+"
       },
       {
        "movementId": "baithak",
-       "name": "Hindu Squat",
+       "name": "Hindu Squats",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 10 min \u2014 target 60+",
-       "rest": 180
+       "sets": 10,
+       "rest": 180,
+       "reps": "min 1 Target: 60+"
       },
       {
        "movementId": "horse",
        "name": "Horse Stance",
-       "sub": "max \u2014 target 75s+",
-       "type": "hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 75,
-       "rest": 120
+       "rest": 120,
+       "reps": "Target: 75s+"
       },
       {
        "movementId": "plank",
        "name": "Plank",
-       "sub": "max \u2014 target 100s+",
-       "type": "hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 100,
-       "rest": 120
+       "rest": 120,
+       "reps": "Target: 100s+"
       },
       {
        "movementId": "run",
@@ -420,8 +420,8 @@
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 11:30",
-       "rest": 0
+       "rest": 0,
+       "reps": "Target: 11:30"
       }
      ]
     }
@@ -434,8 +434,7 @@
    ],
    "phase": "Rebuild",
    "label": "Volume Increase",
-   "intensity": "65-75%",
-   "note": "Add 2-4 reps to pushing and pulling. Add 10 seconds to holds. Shorten rest by 5 seconds.",
+   "note": "Your body adapts to a new level. Build volume toward Warrior targets with warrior-strength movements. Learn them properly before adding speed.",
    "days": [
     {
      "dayNumber": 1,
@@ -449,8 +448,8 @@
        "sub": "",
        "type": "sets",
        "sets": 5,
-       "reps": "12 reps",
-       "rest": 45
+       "rest": 45,
+       "reps": "12 reps"
       },
       {
        "movementId": "archer",
@@ -458,8 +457,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "5 each side",
-       "rest": 50
+       "rest": 50,
+       "reps": "5 each side"
       },
       {
        "movementId": "diamond",
@@ -467,8 +466,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "12 reps",
-       "rest": 45
+       "rest": 45,
+       "reps": "12 reps"
       },
       {
        "movementId": "clap",
@@ -476,8 +475,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "6 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "6 reps"
       },
       {
        "movementId": "plank",
@@ -485,17 +484,17 @@
        "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 75,
-       "rest": 40
+       "rest": 40,
+       "seconds": 75
       },
       {
        "movementId": "sideplank",
        "name": "Side Plank",
-       "sub": "each side",
-       "type": "holdEach",
+       "sub": "each",
+       "type": "hold",
        "sets": 3,
-       "seconds": 30,
-       "rest": 30
+       "rest": 30,
+       "seconds": 30
       },
       {
        "movementId": "dragonflag",
@@ -503,17 +502,17 @@
        "sub": "negatives",
        "type": "sets",
        "sets": 3,
-       "reps": "5 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "5 reps"
       },
       {
        "movementId": "bowdraw",
        "name": "Bow Draw Hold",
-       "sub": "each side",
-       "type": "holdEach",
+       "sub": "each",
+       "type": "hold",
        "sets": 3,
-       "seconds": 20,
-       "rest": 30
+       "rest": 30,
+       "seconds": 20
       }
      ]
     },
@@ -529,17 +528,8 @@
        "sub": "",
        "type": "sets",
        "sets": 6,
-       "reps": "5 reps",
-       "rest": 60
-      },
-      {
-       "movementId": "commando",
-       "name": "Commando Pull-Up",
-       "sub": "",
-       "type": "sets",
-       "sets": 4,
-       "reps": "4 each grip",
-       "rest": 60
+       "rest": 60,
+       "reps": "5 reps"
       },
       {
        "movementId": "chinup",
@@ -547,8 +537,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "6 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "6 reps"
       },
       {
        "movementId": "towelpullup",
@@ -556,8 +546,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "4 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "4 reps"
       },
       {
        "movementId": "deadhang",
@@ -565,17 +555,17 @@
        "sub": "",
        "type": "hold",
        "sets": 4,
-       "seconds": 35,
-       "rest": 40
+       "rest": 40,
+       "seconds": 35
       },
       {
        "movementId": "shieldmarch",
-       "name": "Shield March 50m",
+       "name": "Shield March",
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "timed \u2014 target under 55s",
-       "rest": 75
+       "rest": 75,
+       "reps": "Target: under 55s"
       },
       {
        "movementId": "overheadcarry",
@@ -583,8 +573,8 @@
        "sub": "",
        "type": "sets",
        "sets": 2,
-       "reps": "25m moderate load",
-       "rest": 90
+       "rest": 90,
+       "reps": "Moderate load"
       }
      ]
     },
@@ -600,8 +590,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "25 reps",
-       "rest": 55
+       "rest": 55,
+       "reps": "25 reps"
       },
       {
        "movementId": "cossack",
@@ -609,8 +599,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "8 each side",
-       "rest": 50
+       "rest": 50,
+       "reps": "8 each side"
       },
       {
        "movementId": "pistol",
@@ -618,8 +608,8 @@
        "sub": "assisted",
        "type": "sets",
        "sets": 3,
-       "reps": "3 each leg",
-       "rest": 75
+       "rest": 75,
+       "reps": "3 each leg"
       },
       {
        "movementId": "jumplunge",
@@ -627,8 +617,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "10 each leg",
-       "rest": 50
+       "rest": 50,
+       "reps": "10 each leg"
       },
       {
        "movementId": "calfraise",
@@ -636,8 +626,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "15 each",
-       "rest": 30
+       "rest": 30,
+       "reps": "15 each"
       },
       {
        "movementId": "horse",
@@ -645,17 +635,17 @@
        "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 45,
-       "rest": 45
+       "rest": 45,
+       "seconds": 45
       },
       {
        "movementId": "run",
-       "name": "2km Run",
+       "name": "Run",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 11:15",
-       "rest": 0
+       "rest": 0,
+       "reps": "2km target: 11:15"
       }
      ]
     },
@@ -671,26 +661,26 @@
        "sub": "Sapate",
        "type": "sets",
        "sets": 5,
-       "reps": "10 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "10 reps"
       },
       {
        "movementId": "bearcrawl",
-       "name": "Bear Crawl 20m",
+       "name": "Bear Crawl",
        "sub": "",
        "type": "sets",
        "sets": 5,
-       "reps": "sprint effort",
-       "rest": 45
+       "rest": 45,
+       "reps": "Sprint effort"
       },
       {
        "movementId": "leopardcrawl",
-       "name": "Leopard Crawl 20m",
+       "name": "Leopard Crawl",
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "fast",
-       "rest": 50
+       "rest": 50,
+       "reps": "Fast"
       },
       {
        "movementId": "groundwork",
@@ -698,8 +688,8 @@
        "sub": "",
        "type": "hold",
        "sets": 4,
-       "seconds": 60,
-       "rest": 50
+       "rest": 50,
+       "seconds": 60
       },
       {
        "movementId": "surya",
@@ -707,8 +697,8 @@
        "sub": "flow",
        "type": "sets",
        "sets": 3,
-       "reps": "5 rounds",
-       "rest": 30
+       "rest": 30,
+       "reps": "5 rounds"
       }
      ]
     },
@@ -724,8 +714,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "12 reps",
-       "rest": 55
+       "rest": 55,
+       "reps": "12 reps"
       },
       {
        "movementId": "sprawl",
@@ -733,8 +723,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "10 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "10 reps"
       },
       {
        "movementId": "broadjump",
@@ -742,8 +732,8 @@
        "sub": "",
        "type": "sets",
        "sets": 5,
-       "reps": "3 attempts \u2014 measure",
-       "rest": 60
+       "rest": 60,
+       "reps": "3 attempts"
       },
       {
        "movementId": "gada",
@@ -751,8 +741,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "15 each direction",
-       "rest": 45
+       "rest": 45,
+       "reps": "15 each direction"
       },
       {
        "movementId": "axechop",
@@ -760,8 +750,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "12 each side",
-       "rest": 45
+       "rest": 45,
+       "reps": "12 each side"
       },
       {
        "movementId": "javelin",
@@ -769,8 +759,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "10 each",
-       "rest": 45
+       "rest": 45,
+       "reps": "10 each"
       },
       {
        "movementId": "tuckjump",
@@ -778,24 +768,24 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "8 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "8 reps"
       },
       {
        "movementId": "sprint",
-       "name": "War Sprint",
+       "name": "Sprint",
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "100m full speed",
-       "rest": 90
+       "rest": 90,
+       "reps": "Full speed"
       }
      ]
     },
     {
      "dayNumber": 6,
      "dayName": "GAMES",
-     "focus": "Test Simulation",
+     "focus": "Test Practice",
      "note": "",
      "movements": [
       {
@@ -803,54 +793,54 @@
        "name": "Hindu Push-Up",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 5 min \u2014 target 33+",
-       "rest": 180
+       "sets": 5,
+       "rest": 180,
+       "reps": "min 1 Target: 33+"
       },
       {
        "movementId": "pullup",
-       "name": "Pull-Up",
+       "name": "Pull-Ups",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 2 min \u2014 target 7+",
-       "rest": 180
+       "sets": 2,
+       "rest": 180,
+       "reps": "min 1 Target: 7+"
       },
       {
        "movementId": "baithak",
-       "name": "Hindu Squat",
+       "name": "Hindu Squats",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 10 min \u2014 target 70+",
-       "rest": 180
+       "sets": 10,
+       "rest": 180,
+       "reps": "min 1 Target: 70+"
       },
       {
        "movementId": "deadhang",
        "name": "Dead Hang",
-       "sub": "max \u2014 target 40s+",
-       "type": "hold",
-       "sets": 1,
-       "seconds": 40,
-       "rest": 120
-      },
-      {
-       "movementId": "bearcrawl",
-       "name": "Bear Crawl 20m",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "timed \u2014 target 23s",
-       "rest": 120
+       "rest": 120,
+       "reps": "Target: 40s+"
+      },
+      {
+       "movementId": "bearcrawl",
+       "name": "Bear Crawl",
+       "sub": "",
+       "type": "sets",
+       "sets": 1,
+       "rest": 120,
+       "reps": "Target: 23s"
       },
       {
        "movementId": "broadjump",
        "name": "Broad Jump",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "best of 3 \u2014 target 1.6m+",
-       "rest": 0
+       "sets": 3,
+       "rest": 0,
+       "reps": "1 Target: 1.6m+"
       }
      ]
     }
@@ -863,8 +853,7 @@
    ],
    "phase": "Strengthen",
    "label": "Volume Climb",
-   "intensity": "75-85%",
-   "note": "The hardest phase. Expect soreness. Expect mental resistance.",
+   "note": "",
    "days": [
     {
      "dayNumber": 1,
@@ -875,11 +864,11 @@
       {
        "movementId": "dand",
        "name": "Hindu Push-Up",
-       "sub": "2.5 min block",
+       "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "max reps per block",
-       "rest": 75
+       "rest": 75,
+       "reps": "Max reps per block"
       },
       {
        "movementId": "archer",
@@ -887,8 +876,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "6 each side",
-       "rest": 45
+       "rest": 45,
+       "reps": "6 each side"
       },
       {
        "movementId": "handstandpushup",
@@ -896,8 +885,8 @@
        "sub": "wall, negatives",
        "type": "sets",
        "sets": 3,
-       "reps": "3 reps",
-       "rest": 75
+       "rest": 75,
+       "reps": "3 reps"
       },
       {
        "movementId": "clap",
@@ -905,8 +894,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "8 reps",
-       "rest": 45
+       "rest": 45,
+       "reps": "8 reps"
       },
       {
        "movementId": "plank",
@@ -914,8 +903,8 @@
        "sub": "",
        "type": "hold",
        "sets": 2,
-       "seconds": 90,
-       "rest": 60
+       "rest": 60,
+       "seconds": 90
       },
       {
        "movementId": "dragonflag",
@@ -923,8 +912,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "3 full reps + 3 negatives",
-       "rest": 60
+       "rest": 60,
+       "reps": "3 full + 3 negatives"
       },
       {
        "movementId": "hollow",
@@ -932,8 +921,8 @@
        "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 30,
-       "rest": 30
+       "rest": 30,
+       "seconds": 30
       }
      ]
     },
@@ -949,17 +938,8 @@
        "sub": "",
        "type": "sets",
        "sets": 6,
-       "reps": "6 reps",
-       "rest": 60
-      },
-      {
-       "movementId": "typewriter",
-       "name": "Typewriter Pull-Up",
-       "sub": "",
-       "type": "sets",
-       "sets": 3,
-       "reps": "3 each side",
-       "rest": 75
+       "rest": 60,
+       "reps": "6 reps"
       },
       {
        "movementId": "chinup",
@@ -967,17 +947,17 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "8 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "8 reps"
       },
       {
-       "movementId": "commando",
-       "name": "Commando Pull-Up",
+       "movementId": "invertedrow",
+       "name": "Inverted Row",
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "5 each grip",
-       "rest": 60
+       "rest": 50,
+       "reps": "12 reps"
       },
       {
        "movementId": "deadhang",
@@ -985,17 +965,17 @@
        "sub": "",
        "type": "hold",
        "sets": 4,
-       "seconds": 40,
-       "rest": 40
+       "rest": 40,
+       "seconds": 40
       },
       {
        "movementId": "shieldmarch",
-       "name": "Shield March 50m",
+       "name": "Shield March",
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "target under 50s",
-       "rest": 60
+       "rest": 60,
+       "reps": "Target: under 50s"
       },
       {
        "movementId": "logcarry",
@@ -1003,8 +983,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "25m moderate weight",
-       "rest": 75
+       "rest": 75,
+       "reps": "Moderate weight"
       }
      ]
     },
@@ -1017,11 +997,11 @@
       {
        "movementId": "baithak",
        "name": "Hindu Squat",
-       "sub": "5 min block",
+       "sub": "",
        "type": "sets",
-       "sets": 2,
-       "reps": "max reps per block",
-       "rest": 180
+       "sets": 5,
+       "rest": 180,
+       "reps": "min block 2 Max reps per block"
       },
       {
        "movementId": "cossack",
@@ -1029,17 +1009,17 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "10 each side",
-       "rest": 45
+       "rest": 45,
+       "reps": "10 each side"
       },
       {
        "movementId": "pistol",
        "name": "Pistol Squat",
-       "sub": "assisted to free",
+       "sub": "assisted\u2192free",
        "type": "sets",
        "sets": 4,
-       "reps": "3-5 each leg",
-       "rest": 75
+       "rest": 75,
+       "reps": "3\u20135 each leg"
       },
       {
        "movementId": "jumpsquat",
@@ -1047,8 +1027,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "12 reps",
-       "rest": 45
+       "rest": 45,
+       "reps": "12 reps"
       },
       {
        "movementId": "kneestrike",
@@ -1056,8 +1036,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "10 each leg",
-       "rest": 45
+       "rest": 45,
+       "reps": "10 each leg"
       },
       {
        "movementId": "horse",
@@ -1065,17 +1045,17 @@
        "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 60,
-       "rest": 45
+       "rest": 45,
+       "seconds": 60
       },
       {
        "movementId": "run",
-       "name": "2km Run",
+       "name": "Run",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 10:45",
-       "rest": 0
+       "rest": 0,
+       "reps": "2km target: 10:45"
       }
      ]
     },
@@ -1091,35 +1071,35 @@
        "sub": "Sapate",
        "type": "sets",
        "sets": 5,
-       "reps": "12 reps",
-       "rest": 45
+       "rest": 45,
+       "reps": "12 reps"
       },
       {
        "movementId": "bearcrawl",
-       "name": "Bear Crawl 20m",
+       "name": "Bear Crawl",
        "sub": "",
        "type": "sets",
        "sets": 5,
-       "reps": "timed \u2014 sprint",
-       "rest": 45
+       "rest": 45,
+       "reps": "Sprint"
       },
       {
        "movementId": "leopardcrawl",
-       "name": "Leopard Crawl 20m",
+       "name": "Leopard Crawl",
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "fast",
-       "rest": 45
+       "rest": 45,
+       "reps": "Fast"
       },
       {
        "movementId": "crabwalk",
-       "name": "Crab Walk 20m",
+       "name": "Crab Walk",
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "fast",
-       "rest": 40
+       "rest": 40,
+       "reps": "Fast"
       },
       {
        "movementId": "groundwork",
@@ -1127,8 +1107,8 @@
        "sub": "",
        "type": "hold",
        "sets": 4,
-       "seconds": 60,
-       "rest": 45
+       "rest": 45,
+       "seconds": 60
       },
       {
        "movementId": "hipescape",
@@ -1136,8 +1116,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "10 each side",
-       "rest": 40
+       "rest": 40,
+       "reps": "10 each side"
       }
      ]
     },
@@ -1153,8 +1133,8 @@
        "sub": "heavier",
        "type": "sets",
        "sets": 5,
-       "reps": "10 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "10 reps"
       },
       {
        "movementId": "sprawl",
@@ -1162,8 +1142,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "12 reps",
-       "rest": 45
+       "rest": 45,
+       "reps": "12 reps"
       },
       {
        "movementId": "balancelift",
@@ -1171,17 +1151,17 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "8 each",
-       "rest": 50
+       "rest": 50,
+       "reps": "8 each"
       },
       {
        "movementId": "broadjump",
        "name": "Broad Jump",
-       "sub": "",
+       "sub": "max",
        "type": "sets",
        "sets": 6,
-       "reps": "3 attempts \u2014 max",
-       "rest": 60
+       "rest": 60,
+       "reps": "3 attempts"
       },
       {
        "movementId": "gada",
@@ -1189,17 +1169,17 @@
        "sub": "heavier",
        "type": "sets",
        "sets": 4,
-       "reps": "15 each",
-       "rest": 40
+       "rest": 40,
+       "reps": "15 each"
       },
       {
        "movementId": "stonethrow",
        "name": "Stone Throw",
-       "sub": "",
+       "sub": "max distance",
        "type": "sets",
        "sets": 4,
-       "reps": "5 each side \u2014 max distance",
-       "rest": 45
+       "rest": 45,
+       "reps": "5 each side"
       },
       {
        "movementId": "verticalleap",
@@ -1207,8 +1187,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "8 reps",
-       "rest": 45
+       "rest": 45,
+       "reps": "8 reps"
       },
       {
        "movementId": "bounding",
@@ -1216,15 +1196,15 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "50m full speed",
-       "rest": 75
+       "rest": 75,
+       "reps": "Full speed"
       }
      ]
     },
     {
      "dayNumber": 6,
      "dayName": "GAMES",
-     "focus": "Test Simulation",
+     "focus": "Test Practice",
      "note": "",
      "movements": [
       {
@@ -1232,45 +1212,45 @@
        "name": "Hindu Push-Up",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 5 min \u2014 target 38+",
-       "rest": 180
+       "sets": 5,
+       "rest": 180,
+       "reps": "min 1 Target: 38+"
       },
       {
        "movementId": "pullup",
-       "name": "Pull-Up",
+       "name": "Pull-Ups",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 2 min \u2014 target 8+",
-       "rest": 180
+       "sets": 2,
+       "rest": 180,
+       "reps": "min 1 Target: 8+"
       },
       {
        "movementId": "baithak",
-       "name": "Hindu Squat",
+       "name": "Hindu Squats",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 10 min \u2014 target 80+",
-       "rest": 300
+       "sets": 10,
+       "rest": 300,
+       "reps": "min 1 Target: 80+"
       },
       {
        "movementId": "horse",
        "name": "Horse Stance",
-       "sub": "max \u2014 target 90s+",
-       "type": "hold",
-       "sets": 1,
-       "seconds": 90,
-       "rest": 120
-      },
-      {
-       "movementId": "shieldmarch",
-       "name": "Shield March 50m",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "timed \u2014 target 50s",
-       "rest": 120
+       "rest": 120,
+       "reps": "Target: 90s+"
+      },
+      {
+       "movementId": "shieldmarch",
+       "name": "Shield March",
+       "sub": "",
+       "type": "sets",
+       "sets": 1,
+       "rest": 120,
+       "reps": "Target: 50s"
       },
       {
        "movementId": "run",
@@ -1278,8 +1258,8 @@
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 10:45",
-       "rest": 0
+       "rest": 0,
+       "reps": "Target: 10:45"
       }
      ]
     }
@@ -1292,8 +1272,7 @@
    ],
    "phase": "Strengthen",
    "label": "Intensity Push",
-   "intensity": "75-85%",
-   "note": "Rest drops to 40 seconds on most work. This is where weak points get exposed.",
+   "note": "",
    "days": [
     {
      "dayNumber": 1,
@@ -1304,11 +1283,11 @@
       {
        "movementId": "dand",
        "name": "Hindu Push-Up",
-       "sub": "2.5 min block",
+       "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "max reps per block",
-       "rest": 60
+       "rest": 60,
+       "reps": "Max reps per block"
       },
       {
        "movementId": "handstandpushup",
@@ -1316,8 +1295,8 @@
        "sub": "wall",
        "type": "sets",
        "sets": 4,
-       "reps": "3-5 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "3\u20135 reps"
       },
       {
        "movementId": "archer",
@@ -1325,8 +1304,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "8 each side",
-       "rest": 40
+       "rest": 40,
+       "reps": "8 each side"
       },
       {
        "movementId": "fingerpushup",
@@ -1334,8 +1313,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "5 reps",
-       "rest": 60
+       "rest": 60,
+       "reps": "5 reps"
       },
       {
        "movementId": "plank",
@@ -1343,8 +1322,8 @@
        "sub": "",
        "type": "hold",
        "sets": 2,
-       "seconds": 100,
-       "rest": 45
+       "rest": 45,
+       "seconds": 100
       },
       {
        "movementId": "dragonflag",
@@ -1352,8 +1331,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "5 full reps",
-       "rest": 45
+       "rest": 45,
+       "reps": "5 full reps"
       },
       {
        "movementId": "wipers",
@@ -1361,8 +1340,8 @@
        "sub": "on floor",
        "type": "sets",
        "sets": 3,
-       "reps": "6 each side",
-       "rest": 45
+       "rest": 45,
+       "reps": "6 each side"
       }
      ]
     },
@@ -1378,26 +1357,26 @@
        "sub": "",
        "type": "sets",
        "sets": 6,
-       "reps": "7 reps",
-       "rest": 50
-      },
-      {
-       "movementId": "typewriter",
-       "name": "Typewriter Pull-Up",
-       "sub": "",
-       "type": "sets",
-       "sets": 4,
-       "reps": "4 each side",
-       "rest": 60
+       "rest": 50,
+       "reps": "7 reps"
       },
       {
        "movementId": "muscleup",
        "name": "Muscle-Up",
-       "sub": "attempts",
+       "sub": "attempts/negatives",
        "type": "sets",
        "sets": 4,
-       "reps": "1-2 reps or negatives",
-       "rest": 90
+       "rest": 90,
+       "reps": "1\u20132 reps or negatives"
+      },
+      {
+       "movementId": "chinup",
+       "name": "Chin-Up",
+       "sub": "",
+       "type": "sets",
+       "sets": 4,
+       "rest": 45,
+       "reps": "8 reps"
       },
       {
        "movementId": "deadhang",
@@ -1405,8 +1384,8 @@
        "sub": "",
        "type": "hold",
        "sets": 4,
-       "seconds": 45,
-       "rest": 35
+       "rest": 35,
+       "seconds": 45
       },
       {
        "movementId": "towelpullup",
@@ -1414,17 +1393,17 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "5 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "5 reps"
       },
       {
        "movementId": "shieldmarch",
-       "name": "Shield March 50m",
+       "name": "Shield March",
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "timed \u2014 target 48s",
-       "rest": 60
+       "rest": 60,
+       "reps": "Target: 48s"
       },
       {
        "movementId": "bodycarry",
@@ -1432,8 +1411,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "25m jogging pace",
-       "rest": 75
+       "rest": 75,
+       "reps": "Jogging pace"
       }
      ]
     },
@@ -1446,11 +1425,11 @@
       {
        "movementId": "baithak",
        "name": "Hindu Squat",
-       "sub": "5 min block",
+       "sub": "",
        "type": "sets",
-       "sets": 3,
-       "reps": "max reps per block",
-       "rest": 120
+       "sets": 5,
+       "rest": 120,
+       "reps": "min block 3 Max reps per block"
       },
       {
        "movementId": "pistol",
@@ -1458,8 +1437,8 @@
        "sub": "free",
        "type": "sets",
        "sets": 4,
-       "reps": "3-5 each leg",
-       "rest": 60
+       "rest": 60,
+       "reps": "3\u20135 each leg"
       },
       {
        "movementId": "jumplunge",
@@ -1467,8 +1446,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "12 each leg",
-       "rest": 40
+       "rest": 40,
+       "reps": "12 each leg"
       },
       {
        "movementId": "duckwalk",
@@ -1476,8 +1455,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "15m",
-       "rest": 50
+       "rest": 50,
+       "reps": "15m"
       },
       {
        "movementId": "frontkick",
@@ -1485,8 +1464,8 @@
        "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "10 each leg",
-       "rest": 40
+       "rest": 40,
+       "reps": "10 each leg"
       },
       {
        "movementId": "horse",
@@ -1494,52 +1473,52 @@
        "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 75,
-       "rest": 40
+       "rest": 40,
+       "seconds": 75
       },
       {
        "movementId": "run",
-       "name": "2km Run",
+       "name": "Run",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 10:30",
-       "rest": 0
+       "rest": 0,
+       "reps": "2km target: 10:30"
       }
      ]
     },
     {
      "dayNumber": 4,
      "dayName": "BATTLE",
-     "focus": "Speed & Volume",
+     "focus": "Full Body + Crawl",
      "note": "",
      "movements": [
       {
        "movementId": "burpee",
        "name": "Hindu Burpee",
-       "sub": "AMRAP 3 min",
+       "sub": "Sapate",
        "type": "sets",
-       "sets": 2,
-       "reps": "max reps in 3 min",
-       "rest": 90
+       "sets": 3,
+       "rest": 90,
+       "reps": "min 2 Max reps in 3 min"
       },
       {
        "movementId": "bearcrawl",
-       "name": "Bear Crawl 20m",
+       "name": "Bear Crawl",
        "sub": "",
        "type": "sets",
        "sets": 6,
-       "reps": "timed \u2014 sprint effort",
-       "rest": 40
+       "rest": 40,
+       "reps": "Sprint effort"
       },
       {
        "movementId": "leopardcrawl",
-       "name": "Leopard Crawl 20m",
+       "name": "Leopard Crawl",
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "fast",
-       "rest": 40
+       "rest": 40,
+       "reps": "Fast"
       },
       {
        "movementId": "groundwork",
@@ -1547,15 +1526,15 @@
        "sub": "",
        "type": "hold",
        "sets": 4,
-       "seconds": 90,
-       "rest": 45
+       "rest": 45,
+       "seconds": 90
       }
      ]
     },
     {
      "dayNumber": 5,
      "dayName": "POWER",
-     "focus": "Explosive",
+     "focus": "Hinge + Rotation + Jump",
      "note": "",
      "movements": [
       {
@@ -1564,17 +1543,17 @@
        "sub": "heavy",
        "type": "sets",
        "sets": 5,
-       "reps": "8 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "8 reps"
       },
       {
        "movementId": "sprawl",
        "name": "Wrestler's Sprawl",
-       "sub": "60s block",
+       "sub": "",
        "type": "sets",
        "sets": 3,
-       "reps": "max reps in 60s",
-       "rest": 60
+       "rest": 60,
+       "reps": "Max reps in 60s"
       },
       {
        "movementId": "broadjump",
@@ -1582,8 +1561,8 @@
        "sub": "",
        "type": "sets",
        "sets": 6,
-       "reps": "3 attempts \u2014 measure all",
-       "rest": 50
+       "rest": 50,
+       "reps": "3 attempts"
       },
       {
        "movementId": "gada",
@@ -1591,8 +1570,8 @@
        "sub": "heavy",
        "type": "sets",
        "sets": 5,
-       "reps": "15 each",
-       "rest": 40
+       "rest": 40,
+       "reps": "15 each"
       },
       {
        "movementId": "axechop",
@@ -1600,8 +1579,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "15 each side",
-       "rest": 40
+       "rest": 40,
+       "reps": "15 each side"
       },
       {
        "movementId": "tuckjump",
@@ -1609,17 +1588,17 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "10 reps",
-       "rest": 45
+       "rest": 45,
+       "reps": "10 reps"
       },
       {
        "movementId": "sprint",
-       "name": "War Sprint",
+       "name": "Sprint",
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "100m full speed",
-       "rest": 75
+       "rest": 75,
+       "reps": "Full speed"
       }
      ]
     },
@@ -1627,88 +1606,88 @@
      "dayNumber": 6,
      "dayName": "GAMES",
      "focus": "Full 10-Test Simulation",
-     "note": "All ten in protocol order. Full dress rehearsal.",
+     "note": "",
      "movements": [
       {
        "movementId": "broadjump",
        "name": "Broad Jump",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "3 attempts \u2014 target 1.7m+",
-       "rest": 120
+       "sets": 3,
+       "rest": 120,
+       "reps": "attempts 1 Target: 1.7m+"
       },
       {
        "movementId": "bearcrawl",
-       "name": "Bear Crawl 20m",
+       "name": "Bear Crawl",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 21s",
-       "rest": 180
+       "rest": 180,
+       "reps": "Target: 21s"
       },
       {
        "movementId": "pullup",
-       "name": "Pull-Up",
+       "name": "Pull-Ups",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 2 min \u2014 target 9+",
-       "rest": 180
+       "sets": 2,
+       "rest": 180,
+       "reps": "min 1 Target: 9+"
       },
       {
        "movementId": "dand",
-       "name": "Hindu Push-Up",
+       "name": "Hindu Push-Ups",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 5 min \u2014 target 42+",
-       "rest": 180
+       "sets": 5,
+       "rest": 180,
+       "reps": "min 1 Target: 42+"
       },
       {
        "movementId": "baithak",
-       "name": "Hindu Squat",
+       "name": "Hindu Squats",
        "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max in 10 min \u2014 target 85+",
-       "rest": 300
+       "sets": 10,
+       "rest": 300,
+       "reps": "min 1 Target: 85+"
       },
       {
        "movementId": "deadhang",
        "name": "Dead Hang",
-       "sub": "target 50s+",
-       "type": "hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 50,
-       "rest": 120
+       "rest": 120,
+       "reps": "Target: 50s+"
       },
       {
        "movementId": "plank",
        "name": "Plank",
-       "sub": "target 105s+",
-       "type": "hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 105,
-       "rest": 120
+       "rest": 120,
+       "reps": "Target: 105s+"
       },
       {
        "movementId": "horse",
        "name": "Horse Stance",
-       "sub": "target 100s+",
-       "type": "hold",
-       "sets": 1,
-       "seconds": 100,
-       "rest": 120
-      },
-      {
-       "movementId": "shieldmarch",
-       "name": "Shield March 50m",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 48s",
-       "rest": 180
+       "rest": 120,
+       "reps": "Target: 100s+"
+      },
+      {
+       "movementId": "shieldmarch",
+       "name": "Shield March",
+       "sub": "",
+       "type": "sets",
+       "sets": 1,
+       "rest": 180,
+       "reps": "Target: 48s"
       },
       {
        "movementId": "run",
@@ -1716,8 +1695,8 @@
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 10:30",
-       "rest": 0
+       "rest": 0,
+       "reps": "Target: 10:30"
       }
      ]
     }
@@ -1730,23 +1709,22 @@
    ],
    "phase": "Harden",
    "label": "Test-Condition Training",
-   "intensity": "80-90%",
-   "note": "Blocks are exclusively against the clock. You are training to perform under fatigue.",
+   "note": "",
    "days": [
     {
      "dayNumber": 1,
      "dayName": "STRIKE",
-     "focus": "Timed",
-     "note": "",
+     "focus": "Push + Core",
+     "note": "TIMED",
      "movements": [
       {
        "movementId": "dand",
        "name": "Hindu Push-Up",
-       "sub": "5 min block",
+       "sub": "",
        "type": "sets",
-       "sets": 2,
-       "reps": "max reps \u2014 target 45+ per block",
-       "rest": 90
+       "sets": 5,
+       "rest": 90,
+       "reps": "min block 2 Max reps (target 45+/block)"
       },
       {
        "movementId": "handstandpushup",
@@ -1754,8 +1732,8 @@
        "sub": "wall",
        "type": "sets",
        "sets": 4,
-       "reps": "5 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "5 reps"
       },
       {
        "movementId": "archer",
@@ -1763,8 +1741,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "8 each side",
-       "rest": 40
+       "rest": 40,
+       "reps": "8 each side"
       },
       {
        "movementId": "fingerpushup",
@@ -1772,17 +1750,17 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "6 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "6 reps"
       },
       {
        "movementId": "plank",
        "name": "Plank Hold",
-       "sub": "Warrior target",
+       "sub": "",
        "type": "hold",
        "sets": 2,
-       "seconds": 120,
-       "rest": 60
+       "rest": 60,
+       "seconds": 120
       },
       {
        "movementId": "dragonflag",
@@ -1790,34 +1768,25 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "5 reps",
-       "rest": 40
+       "rest": 40,
+       "reps": "5 reps"
       }
      ]
     },
     {
      "dayNumber": 2,
      "dayName": "RAID",
-     "focus": "Pull-Up Focus",
-     "note": "",
+     "focus": "Pull + Carry",
+     "note": "PULL-UP FOCUS",
      "movements": [
       {
        "movementId": "pullup",
        "name": "Pull-Up",
-       "sub": "2 min block",
-       "type": "sets",
-       "sets": 3,
-       "reps": "max reps \u2014 target 9+ per block",
-       "rest": 90
-      },
-      {
-       "movementId": "typewriter",
-       "name": "Typewriter Pull-Up",
        "sub": "",
        "type": "sets",
-       "sets": 4,
-       "reps": "5 each side",
-       "rest": 50
+       "sets": 2,
+       "rest": 90,
+       "reps": "min block 3 Max reps (target 9+/block)"
       },
       {
        "movementId": "muscleup",
@@ -1825,43 +1794,52 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "1-3 reps",
-       "rest": 75
+       "rest": 75,
+       "reps": "1\u20133 reps"
+      },
+      {
+       "movementId": "chinup",
+       "name": "Chin-Up",
+       "sub": "",
+       "type": "sets",
+       "sets": 4,
+       "rest": 50,
+       "reps": "8 reps"
       },
       {
        "movementId": "deadhang",
        "name": "Dead Hang",
-       "sub": "Warrior target",
+       "sub": "",
        "type": "hold",
        "sets": 3,
-       "seconds": 60,
-       "rest": 45
+       "rest": 45,
+       "seconds": 60
       },
       {
        "movementId": "shieldmarch",
-       "name": "Shield March 50m",
+       "name": "Shield March",
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "target 46s",
-       "rest": 60
+       "rest": 60,
+       "reps": "Target: 46s"
       }
      ]
     },
     {
      "dayNumber": 3,
      "dayName": "MARCH",
-     "focus": "Timed Squats",
-     "note": "",
+     "focus": "Legs + Run",
+     "note": "TIMED SQUATS",
      "movements": [
       {
        "movementId": "baithak",
        "name": "Hindu Squat",
-       "sub": "10 min block",
+       "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max reps \u2014 target 90+",
-       "rest": 300
+       "sets": 10,
+       "rest": 300,
+       "reps": "min block 1 Max reps (target 90+)"
       },
       {
        "movementId": "pistol",
@@ -1869,8 +1847,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "5 each leg",
-       "rest": 50
+       "rest": 50,
+       "reps": "5 each leg"
       },
       {
        "movementId": "cossack",
@@ -1878,8 +1856,8 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "10 each",
-       "rest": 40
+       "rest": 40,
+       "reps": "10 each"
       },
       {
        "movementId": "kneestrike",
@@ -1887,61 +1865,61 @@
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "12 each leg",
-       "rest": 40
+       "rest": 40,
+       "reps": "12 each leg"
       },
       {
        "movementId": "horse",
        "name": "Horse Stance Hold",
-       "sub": "Warrior target",
+       "sub": "",
        "type": "hold",
        "sets": 2,
-       "seconds": 120,
-       "rest": 60
+       "rest": 60,
+       "seconds": 120
       },
       {
        "movementId": "run",
-       "name": "2km Run",
+       "name": "Run",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 10:15",
-       "rest": 0
+       "rest": 0,
+       "reps": "2km target: 10:15"
       }
      ]
     },
     {
      "dayNumber": 4,
      "dayName": "BATTLE",
-     "focus": "Speed & Volume",
-     "note": "",
+     "focus": "Full Body + Crawl",
+     "note": "SPEED & VOLUME",
      "movements": [
       {
        "movementId": "burpee",
        "name": "Hindu Burpee",
-       "sub": "AMRAP 5 min",
+       "sub": "",
        "type": "sets",
-       "sets": 1,
-       "reps": "max reps",
-       "rest": 180
+       "sets": 5,
+       "rest": 180,
+       "reps": "min 1 Max reps"
       },
       {
        "movementId": "bearcrawl",
-       "name": "Bear Crawl 20m",
+       "name": "Bear Crawl",
        "sub": "",
        "type": "sets",
        "sets": 6,
-       "reps": "timed \u2014 target 20s",
-       "rest": 40
+       "rest": 40,
+       "reps": "Sprint (target 20s)"
       },
       {
        "movementId": "leopardcrawl",
-       "name": "Leopard Crawl 20m",
+       "name": "Leopard Crawl",
        "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "fast",
-       "rest": 40
+       "rest": 40,
+       "reps": "Fast"
       },
       {
        "movementId": "groundwork",
@@ -1949,16 +1927,16 @@
        "sub": "",
        "type": "hold",
        "sets": 4,
-       "seconds": 90,
-       "rest": 40
+       "rest": 40,
+       "seconds": 90
       }
      ]
     },
     {
      "dayNumber": 5,
      "dayName": "POWER",
-     "focus": "Explosive",
-     "note": "",
+     "focus": "Hinge + Rotation + Jump",
+     "note": "EXPLOSIVE",
      "movements": [
       {
        "movementId": "broadjump",
@@ -1966,17 +1944,17 @@
        "sub": "",
        "type": "sets",
        "sets": 8,
-       "reps": "3 attempts per set \u2014 max",
-       "rest": 50
+       "rest": 50,
+       "reps": "3 attempts/set"
       },
       {
        "movementId": "sprawl",
        "name": "Wrestler's Sprawl",
-       "sub": "60s block",
+       "sub": "",
        "type": "sets",
        "sets": 4,
-       "reps": "max reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "Max reps"
       },
       {
        "movementId": "gada",
@@ -1984,26 +1962,26 @@
        "sub": "",
        "type": "sets",
        "sets": 5,
-       "reps": "18 each direction",
-       "rest": 35
+       "rest": 35,
+       "reps": "18 each direction"
       },
       {
        "movementId": "stonethrow",
        "name": "Stone Throw",
-       "sub": "",
+       "sub": "max distance",
        "type": "sets",
        "sets": 4,
-       "reps": "5 each \u2014 max distance",
-       "rest": 40
+       "rest": 40,
+       "reps": "5 each"
       },
       {
        "movementId": "sprint",
-       "name": "War Sprint",
+       "name": "Sprint",
        "sub": "",
        "type": "sets",
        "sets": 5,
-       "reps": "100m full speed",
-       "rest": 60
+       "rest": 60,
+       "reps": "Full speed"
       },
       {
        "movementId": "verticalleap",
@@ -2011,8 +1989,8 @@
        "sub": "max",
        "type": "sets",
        "sets": 4,
-       "reps": "5 reps",
-       "rest": 50
+       "rest": 50,
+       "reps": "5 reps"
       }
      ]
     },
@@ -2020,87 +1998,88 @@
      "dayNumber": 6,
      "dayName": "GAMES",
      "focus": "Full 10-Test at Warrior Standard",
-     "note": "You should pass seven to ten at Warrior level. Record everything.",
+     "note": "Full 10-test at Warrior standard. You should pass seven to ten. Record everything.",
+     "source": "prose instruction, battery from the rank test table",
      "movements": [
       {
        "movementId": "broadjump",
        "name": "Broad Jump",
-       "sub": "",
+       "sub": "3 attempts",
        "type": "sets",
        "sets": 1,
-       "reps": "3 attempts \u2014 target 1.8m",
+       "reps": "1.8m",
        "rest": 120
       },
       {
        "movementId": "bearcrawl",
-       "name": "Bear Crawl 20m",
+       "name": "Bear Crawl",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 20s",
+       "reps": "20 seconds",
        "rest": 180
       },
       {
        "movementId": "pullup",
-       "name": "Pull-Up",
-       "sub": "",
+       "name": "Pull-Ups",
+       "sub": "max in 2 min",
        "type": "sets",
        "sets": 1,
-       "reps": "max in 2 min \u2014 target 10",
+       "reps": "10 reps",
        "rest": 180
       },
       {
        "movementId": "dand",
-       "name": "Hindu Push-Up",
-       "sub": "",
+       "name": "Hindu Push-Ups",
+       "sub": "max in 5 min",
        "type": "sets",
        "sets": 1,
-       "reps": "max in 5 min \u2014 target 50",
+       "reps": "50 reps",
        "rest": 180
       },
       {
        "movementId": "baithak",
-       "name": "Hindu Squat",
-       "sub": "",
+       "name": "Hindu Squats",
+       "sub": "max in 10 min",
        "type": "sets",
        "sets": 1,
-       "reps": "max in 10 min \u2014 target 100",
+       "reps": "100 reps",
        "rest": 300
       },
       {
        "movementId": "deadhang",
        "name": "Dead Hang",
-       "sub": "target 60s",
-       "type": "hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 60,
+       "reps": "60 seconds",
        "rest": 120
       },
       {
        "movementId": "plank",
-       "name": "Plank",
-       "sub": "target 2 min",
-       "type": "hold",
+       "name": "Plank Hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 120,
+       "reps": "2 minutes",
        "rest": 120
       },
       {
        "movementId": "horse",
        "name": "Horse Stance",
-       "sub": "target 2 min",
-       "type": "hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 120,
+       "reps": "2 minutes",
        "rest": 120
       },
       {
        "movementId": "shieldmarch",
-       "name": "Shield March 50m",
+       "name": "Shield March",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 45s",
+       "reps": "45 seconds",
        "rest": 180
       },
       {
@@ -2109,7 +2088,7 @@
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "target 10:00",
+       "reps": "10:00",
        "rest": 0
       }
      ]
@@ -2123,12 +2102,11 @@
    ],
    "phase": "Harden",
    "label": "Weak Test Focus",
-   "intensity": "80-90%",
    "sameAs": [
     9,
     10
    ],
-   "note": "Same structure, weighted toward your weakest three tests. Games day: your failing tests only. Week 12 Day 6 is the final full simulation."
+   "note": "Same structure, focused on your weakest three tests. Extra volume goes to your gaps. Games day: practice only your failing tests. Week 12 Day 6 is a final full simulation."
   },
   {
    "weeks": [
@@ -2137,12 +2115,11 @@
    ],
    "phase": "Peak & Test",
    "label": "Final Push",
-   "intensity": "85-95%",
    "sameAs": [
     9,
     10
    ],
-   "note": "Hold peak volume on weak tests, reduce it on tests already passed. Every Games session is a full simulation."
+   "note": "Maintain peak volume on weak tests, reduce on passed ones. Every Games session is a full simulation."
   },
   {
    "weeks": [
@@ -2150,13 +2127,12 @@
    ],
    "phase": "Peak & Test",
    "label": "Taper",
-   "intensity": "85%",
    "taperFrom": [
     13,
     14
    ],
    "setsDelta": 2,
-   "note": "Volume down 30 to 40 percent, intensity high. Three or four sets, not five or six. Games day: two weakest tests at 90 percent. Do NOT train to failure."
+   "note": "Cut total volume 30 to 40 percent, keep intensity. Three to four sets, not five to six. Do NOT train to failure."
   },
   {
    "weeks": [
@@ -2164,8 +2140,8 @@
    ],
    "phase": "Peak & Test",
    "label": "Test Week",
-   "intensity": "100%",
-   "note": "Thursday is the test. Everything before it is preparation.",
+   "test": true,
+   "note": "Mon light movement \u00b7 Tue two weakest tests at 80% \u00b7 Wed complete rest \u00b7 Thu RANK TEST \u00b7 Fri rest.",
    "days": [
     {
      "dayNumber": 1,
@@ -2192,20 +2168,20 @@
      "movements": [
       {
        "movementId": "dand",
-       "name": "Hindu Push-Up",
-       "sub": "",
+       "name": "Your weakest test",
+       "sub": "at 80 percent effort",
        "type": "sets",
        "sets": 1,
-       "reps": "at 80 percent effort",
+       "reps": "80 percent effort",
        "rest": 180
       },
       {
        "movementId": "pullup",
-       "name": "Pull-Up",
-       "sub": "",
+       "name": "Your second weakest test",
+       "sub": "at 80 percent effort",
        "type": "sets",
        "sets": 1,
-       "reps": "at 80 percent effort",
+       "reps": "80 percent effort",
        "rest": 180
       }
      ]
@@ -2214,87 +2190,86 @@
      "dayNumber": 4,
      "dayName": "TEST",
      "focus": "Warrior Rank Test",
-     "note": "All ten in order. Ten-minute warm-up first.",
      "movements": [
       {
        "movementId": "broadjump",
        "name": "Broad Jump",
-       "sub": "",
+       "sub": "3 attempts",
        "type": "sets",
        "sets": 1,
-       "reps": "3 attempts \u2014 1.8m to pass",
+       "reps": "1.8m to pass",
        "rest": 120
       },
       {
        "movementId": "bearcrawl",
-       "name": "Bear Crawl 20m",
+       "name": "Bear Crawl",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "20s to pass",
+       "reps": "20 seconds to pass",
        "rest": 180
       },
       {
        "movementId": "pullup",
-       "name": "Pull-Up",
-       "sub": "",
+       "name": "Pull-Ups",
+       "sub": "max in 2 min",
        "type": "sets",
        "sets": 1,
-       "reps": "max in 2 min \u2014 10 to pass",
+       "reps": "10 reps to pass",
        "rest": 180
       },
       {
        "movementId": "dand",
-       "name": "Hindu Push-Up",
-       "sub": "",
+       "name": "Hindu Push-Ups",
+       "sub": "max in 5 min",
        "type": "sets",
        "sets": 1,
-       "reps": "max in 5 min \u2014 50 to pass",
+       "reps": "50 reps to pass",
        "rest": 180
       },
       {
        "movementId": "baithak",
-       "name": "Hindu Squat",
-       "sub": "",
+       "name": "Hindu Squats",
+       "sub": "max in 10 min",
        "type": "sets",
        "sets": 1,
-       "reps": "max in 10 min \u2014 100 to pass",
+       "reps": "100 reps to pass",
        "rest": 300
       },
       {
        "movementId": "deadhang",
        "name": "Dead Hang",
-       "sub": "60s to pass",
-       "type": "hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 60,
+       "reps": "60 seconds to pass",
        "rest": 120
       },
       {
        "movementId": "plank",
        "name": "Plank Hold",
-       "sub": "2 min to pass",
-       "type": "hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 120,
+       "reps": "2 minutes to pass",
        "rest": 120
       },
       {
        "movementId": "horse",
        "name": "Horse Stance",
-       "sub": "2 min to pass",
-       "type": "hold",
+       "sub": "",
+       "type": "sets",
        "sets": 1,
-       "seconds": 120,
+       "reps": "2 minutes to pass",
        "rest": 120
       },
       {
        "movementId": "shieldmarch",
-       "name": "Shield March 50m",
+       "name": "Shield March",
        "sub": "",
        "type": "sets",
        "sets": 1,
-       "reps": "45s to pass",
+       "reps": "45 seconds to pass",
        "rest": 180
       },
       {
@@ -2306,10 +2281,10 @@
        "reps": "10:00 to pass",
        "rest": 0
       }
-     ]
+     ],
+     "note": "All ten in order. Ten-minute warm-up first."
     }
-   ],
-   "test": true
+   ]
   }
  ]
 }

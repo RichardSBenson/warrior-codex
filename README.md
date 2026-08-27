@@ -80,3 +80,39 @@ value drops to or below the browsing size.
   `[15, 30, 60, 90, 110, 165]`, matching the program documents.
 
 No application logic was rewritten. Only import paths moved.
+
+## Security posture
+
+The app is a static PWA with no backend and no account. Everything a user
+produces lives in `localStorage` on their own device. That shapes the threat
+model: there is no server to attack and no data of anyone else's to reach.
+What remains is worth doing properly.
+
+**Headers** are set in `vercel.json`. A content security policy restricts
+scripts to the origin, `frame-ancestors 'none'` and `X-Frame-Options: DENY`
+prevent the app being framed for clickjacking, `Referrer-Policy: no-referrer`
+stops URLs leaking outward, and `Permissions-Policy` denies camera, microphone,
+geolocation and payment.
+
+`style-src` must allow `'unsafe-inline'` because every component styles itself
+with inline style objects. That is a real weakening of the policy and the reason
+it matters that nothing in this codebase uses `dangerouslySetInnerHTML`. If the
+styling ever moves to CSS files, tighten it.
+
+**Camera and geolocation are denied at the header level.** Module 8 needs the
+camera and Module 11 needs geolocation. Both will fail silently until
+`Permissions-Policy` is changed to `camera=(self)` and `geolocation=(self)`.
+That is deliberate — permissions should be granted when a feature ships, not
+years ahead of it.
+
+**Stored values are untrusted.** `data/repositories/validate.js` sanitises every
+read: unknown trial ids are dropped, scores must be finite and non-negative, a
+start date must parse and must not be in the future, record counters are clamped
+to whole numbers, and the Proving Ground override must name a real rank inside
+real bounds. Prototype keys never survive a read. An unreadable value becomes
+the fallback and the app carries on.
+
+**The Proving Ground** is enabled by `?dev=1`, after which the parameter is
+stripped from the URL and history so the link cannot be forwarded to switch it
+on for someone else invisibly. It changes only which session is displayed. It
+writes no result, advances no rank and touches no record.

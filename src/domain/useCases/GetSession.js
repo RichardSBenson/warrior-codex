@@ -78,17 +78,29 @@ export function getSession(program, week, day) {
   return dress(found, { note: found.note || block.note, tapered: false, reused: false });
 }
 
+/**
+ * Where in the program you are standing right now.
+ * An override replaces the calendar, and nothing else — it cannot change a
+ * result, a record or a rank. Used by the Proving Ground to walk a twelve-week
+ * program in a minute instead of twelve weeks.
+ */
+export function positionFor(startISO, today = new Date(), override = null) {
+  if (override && override.week) return { week: override.week, day: override.day || 1, overridden: true };
+  return { week: weekNumber(startISO, today), day: dayNumber(today), overridden: false };
+}
+
 /** Everything the training screen needs for today, or a rest day. */
-export function todaysSession(program, startISO, today = new Date()) {
-  const week = weekNumber(startISO, today);
-  const day = dayNumber(today);
-  if (day === 7) return { rest: true, week, dayNumber: 7, dayName: 'REST' };
+export function todaysSession(program, startISO, today = new Date(), override = null) {
+  const { week, day, overridden } = positionFor(startISO, today, override);
+  if (day === 7) return { rest: true, week, dayNumber: 7, dayName: 'REST', overridden };
   const session = getSession(program, week, day);
-  return session ? { rest: false, ...session } : { rest: true, week, dayNumber: day, dayName: 'REST' };
+  return session
+    ? { rest: false, ...session, overridden }
+    : { rest: true, week, dayNumber: day, dayName: 'REST', overridden };
 }
 
 /** Total prescribed sets — used for the progress bar. */
 export const totalSets = (session) =>
   !session || !session.movements ? 0 : session.movements.reduce((n, m) => n + m.sets, 0);
 
-export default { weekNumber, dayNumber, blockForWeek, getSession, todaysSession, totalSets, taperSession };
+export default { weekNumber, dayNumber, positionFor, blockForWeek, getSession, todaysSession, totalSets, taperSession };

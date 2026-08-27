@@ -3,7 +3,8 @@ import {
   BLACK, PANEL, GOLD, DARK_GOLD, LIGHT, GRAY, LINE,
   fmt, displayValue, btn, panel, overlay, label, serif,
 } from "../../design/uiKit.js";
-import { CORE_TESTS, TIERS } from "../../domain/entities/Trial.js";
+import { CORE_TESTS, TIERS, ROOM_IDS } from "../../domain/entities/Trial.js";
+import { countWord } from "../../utils/words.js";
 import { RANKS, RANK_COLORS, REVEAL_FLAVOR, rankForTest } from "../../domain/entities/Rank.js";
 import { pickVoice } from "../../domain/useCases/SelectVoice.js";
 import { WARM_UP } from "../../domain/entities/Program.js";
@@ -71,7 +72,7 @@ export function TestListScreen({ results, onSelect, onViewResults }) {
         {!roomDone && (
           <div style={{ color: LIGHT, fontFamily: "'Cormorant Garamond',serif", fontSize: "0.9rem",
             marginTop: 12, lineHeight: 1.5 }}>
-            Begin with <b style={{ color: GOLD }}>The Room</b> — four trials, no equipment, right where you stand.
+            Begin with <b style={{ color: GOLD }}>The Room</b> — {countWord(ROOM_IDS.length)} trials, no equipment, right where you stand.
             They alone will give you a standing.
           </div>
         )}
@@ -412,7 +413,7 @@ export function ResultsScreen({ results, onRestart, onViewProgress }) {
       <p style={{ color: LIGHT, fontFamily: "'Cormorant Garamond',serif", fontSize: "1.05rem",
         lineHeight: 1.6, maxWidth: 300 }}>
         {provisional
-          ? `Provisional — measured on ${doneCount} of ten trials. The field has not yet tested you.`
+          ? `Provisional — measured on ${doneCount} of ${countWord(CORE_TESTS.length)} trials. The field has not yet tested you.`
           : REVEAL_FLAVOR[rankName]}
       </p>
       <button onClick={onViewProgress} style={{

@@ -19,11 +19,12 @@ import { CORE_TESTS } from "./domain/entities/Trial.js";
 import { RANKS } from "./domain/entities/Rank.js";
 import { programFor } from "./data/repositories/LocalProgramRepository.js";
 import { todaysSession } from "./domain/useCases/GetSession.js";
+import ProvingGround from "./presentation/screens/ProvingGround.jsx";
 import { emptyRecord, addSession, addOrderHeld } from "./domain/entities/Record.js";
 import { defaultOrders, toggleOrder, ordersHeldToday } from "./domain/entities/StandingOrder.js";
 import { roomComplete, overallRank, theWall } from "./domain/useCases/ScoreAssessment.js";
 
-import { BLACK, LIGHT, GRAY, LINE } from "./design/uiKit.js";
+import { BLACK, LIGHT, GRAY, LINE, GOLD } from "./design/uiKit.js";
 import {
   SplashScreen, TestListScreen, TestScreen, ResultsScreen,
 } from "./presentation/screens/AssessmentScreens.jsx";
@@ -41,13 +42,34 @@ export default function App() {
 
   const hasStanding = roomComplete(results);
   const [screen, setScreen]   = useState(hasStanding ? "profile" : "splash");
+
+  // The Proving Ground: a test harness, off unless switched on with ?dev=1.
+  const [dev, setDev] = useState(() => {
+    // ?dev=1 enables the test harness, then the parameter is stripped from the
+    // URL and history so a link cannot be forwarded to switch it on for someone
+    // else without them seeing it. Turning it off is a button inside the panel.
+    if (typeof window === "undefined") return null;
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("dev") === "1") {
+      storage.saveDev({ enabled: true, override: null });
+      url.searchParams.delete("dev");
+      window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+    }
+    return storage.loadDev();
+  });
+  const setOverride = (override) => {
+    const next = { enabled: true, override };
+    storage.saveDev(next); setDev(next);
+  };
   const [current, setCurrent] = useState(0);
 
   const rankName = RANKS[overallRank(results)];
 
   // Today's prescribed session, from the program for your current rank.
   // No program for that rank yet, or a seventh day — both come back as rest.
-  const session = todaysSession(programFor(rankName), startDate);
+  const devRank = dev?.override?.rank;
+  const session = todaysSession(
+    programFor(devRank || rankName), startDate, new Date(), dev?.override || null);
 
   // persist results as they come in
   useEffect(() => { storage.saveResults(results); }, [results]);
@@ -166,7 +188,7 @@ export default function App() {
 
       {screen === "session" && !session.rest && (
         <SessionScreen
-          session={{ ...session, rank: rankName }}
+          session={{ ...session, rank: devRank || rankName }}
           onBack={() => setScreen("profile")}
           onComplete={completeSession} />
       )}
@@ -187,6 +209,25 @@ export default function App() {
             BACK
           </button>
         </div>
+      )}
+
+      {screen === "proving" && dev?.enabled && (
+        <ProvingGround
+          override={dev.override}
+          setOverride={setOverride}
+          onOpenSession={() => setScreen("session")}
+          onBack={() => setScreen("profile")}
+          onDisable={() => { storage.saveDev(null); setDev(null); setScreen("profile"); }} />
+      )}
+
+      {dev?.enabled && screen !== "proving" && (
+        <button
+          onClick={() => setScreen("proving")}
+          style={{ position: "fixed", right: 12, bottom: 12, zIndex: 50, minHeight: 44, minWidth: 44,
+                   padding: "8px 14px", background: BLACK, color: GOLD, border: `1px solid ${GOLD}`,
+                   fontFamily: "'Cinzel',serif", fontSize: "0.68rem", letterSpacing: "0.12em" }}>
+          {dev.override ? `W${dev.override.week} D${dev.override.day}` : "PROVING"}
+        </button>
       )}
 
       {screen === "orders" && (

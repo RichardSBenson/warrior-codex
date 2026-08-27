@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import program from '../../data/sources/recruitToSoldier.json';
 import exercises from '../../data/sources/exercises.json';
-import { weekNumber, dayNumber, blockForWeek, getSession, todaysSession, totalSets } from '../useCases/GetSession.js';
+import { weekNumber, dayNumber, positionFor, blockForWeek, getSession, todaysSession, totalSets } from '../useCases/GetSession.js';
 
 const EX_IDS = new Set(exercises.map((e) => e.id));
 
@@ -92,5 +92,40 @@ describe('the taper', () => {
 
   it('reduces total volume', () => {
     expect(totalSets(taper)).toBeLessThan(totalSets(peak));
+  });
+});
+
+describe('the proving ground override', () => {
+  const start = '2026-01-01T00:00:00.000Z';
+
+  it('reads the calendar when there is no override', () => {
+    const p = positionFor(start, new Date('2026-01-08T10:00:00Z'), null);
+    expect(p).toMatchObject({ week: 2, overridden: false });
+  });
+
+  it('stands wherever the override says', () => {
+    const p = positionFor(start, new Date('2026-01-08T10:00:00Z'), { week: 9, day: 3 });
+    expect(p).toMatchObject({ week: 9, day: 3, overridden: true });
+  });
+
+  it('returns the session for that position, not today', () => {
+    const s = todaysSession(program, start, new Date('2026-01-02T10:00:00Z'), { week: 9, day: 6 });
+    expect(s.week).toBe(9);
+    expect(s.dayName).toBe('GAMES');
+  });
+
+  it('marks the session as overridden so nothing mistakes it for today', () => {
+    const s = todaysSession(program, start, new Date(), { week: 5, day: 1 });
+    expect(s.overridden).toBe(true);
+  });
+
+  it('still rests on day seven, override or not', () => {
+    expect(todaysSession(program, start, new Date(), { week: 3, day: 7 }).rest).toBe(true);
+  });
+
+  it('walks every week and day of the program without throwing', () => {
+    for (let w = 1; w <= program.weeks; w++)
+      for (let d = 1; d <= 7; d++)
+        expect(() => todaysSession(program, start, new Date(), { week: w, day: d })).not.toThrow();
   });
 });

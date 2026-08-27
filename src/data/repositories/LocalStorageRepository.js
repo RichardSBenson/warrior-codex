@@ -8,6 +8,7 @@
 // The rest of the app has no idea where its data lives, and that is the point.
 // ─────────────────────────────────────────────────────────────
 import { emptyRecord } from "../../domain/entities/Record.js";
+import { validateResults, validateStart, validateRecord, validateDev, validateHeld } from "./validate.js";
 
 const KEYS = {
   results: "codex_assessment_v1",
@@ -16,6 +17,7 @@ const KEYS = {
   ground:  "codex_ground_v1",
   orders:  "codex_orders_v1",
   held:    "codex_held_v1",
+  dev: "codex.dev",
 };
 
 function read(key, fallback) {
@@ -37,13 +39,13 @@ function write(key, value) {
 }
 
 export const storage = {
-  loadResults: () => read(KEYS.results, {}),
+  loadResults: () => validateResults(read(KEYS.results, {})),
   saveResults: (r) => write(KEYS.results, r),
 
-  loadStart:   () => read(KEYS.start, null),
+  loadStart:   () => validateStart(read(KEYS.start, null)),
   saveStart:   (iso) => write(KEYS.start, iso),
 
-  loadRecord:  () => read(KEYS.record, emptyRecord()),
+  loadRecord:  () => validateRecord(read(KEYS.record, emptyRecord()), emptyRecord()),
   saveRecord:  (rec) => write(KEYS.record, rec),
 
   loadGround:  () => read(KEYS.ground, null),
@@ -52,8 +54,11 @@ export const storage = {
   loadOrders:  () => read(KEYS.orders, null),
   saveOrders:  (o) => write(KEYS.orders, o),
 
-  loadHeld:    () => read(KEYS.held, null),
+  loadHeld:    () => validateHeld(read(KEYS.held, null)),
   saveHeld:    (h) => write(KEYS.held, h),
+
+  loadDev:     () => validateDev(read(KEYS.dev, null)),
+  saveDev:     (d) => write(KEYS.dev, d),
 
   clearAll: () => {
     try {
