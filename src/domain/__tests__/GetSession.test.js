@@ -33,7 +33,10 @@ describe('the program', () => {
         }
   });
 
-  it('names the warm-up as non-negotiable', () => expect(program.warmUp).toMatch(/Surya/));
+  it('opens with a timed Surya Namaskar', () => {
+    expect(program.warmUp.steps[0].name).toBe('Surya Namaskar');
+    expect(program.warmUp.steps[0].seconds).toBeGreaterThan(0);
+  });
 });
 
 describe('placing you in the program', () => {

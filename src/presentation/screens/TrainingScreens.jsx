@@ -6,7 +6,7 @@ import {
 import { CORE_TESTS, TIERS } from "../../domain/entities/Trial.js";
 import { RANKS, RANK_COLORS, REVEAL_FLAVOR, rankForTest } from "../../domain/entities/Rank.js";
 import { pickVoice } from "../../domain/useCases/SelectVoice.js";
-import { WARM_UP } from "../../domain/entities/Program.js";
+import WarmUpTimer from "../components/WarmUpTimer.jsx";
 import {
   standing, overallRank, completedTests, remainingTests,
   roomComplete, allComplete, bestTest, theWall,
@@ -83,6 +83,7 @@ export function SessionScreen({ session, onBack, onComplete }) {
   const restRef = useRef(null);
   const holdRef = useRef(null);
   // commander voice — chosen once when the session mounts, spoken to the user's current rank
+  const [warmDone, setWarmDone] = useState(false);
   const [preLine] = useState(() => pickVoice("preworkout", session.rank));
   const [midLine] = useState(() => pickVoice("midworkout", session.rank));
   const [winLine] = useState(() => pickVoice("victory", session.rank));
@@ -148,7 +149,7 @@ export function SessionScreen({ session, onBack, onComplete }) {
         </div>
         <div style={{ color: GRAY, fontFamily: "'Cormorant Garamond',serif", fontSize: "0.82rem",
           marginTop: 6, lineHeight: 1.5 }}>
-          Warm up first — 5 minutes Surya Namaskar. Then complete every set.
+          {warmDone ? "Warm. Complete every set." : "Warm up first. Then complete every set."}
         </div>
         <div style={{ height: 5, background: LINE, borderRadius: 3, marginTop: 12, overflow: "hidden" }}>
           <div style={{ width: `${(doneSets / totalSets) * 100}%`, height: "100%", background: GOLD,
@@ -156,6 +157,12 @@ export function SessionScreen({ session, onBack, onComplete }) {
         </div>
         <div style={{ color: GRAY, fontSize: "0.66rem", marginTop: 5 }}>{doneSets} / {totalSets} sets complete</div>
       </div>
+
+      {!warmDone && (
+        <div style={{ marginTop: "1.1rem" }}>
+          <WarmUpTimer warmUp={session.warmUp} onDone={() => setWarmDone(true)} />
+        </div>
+      )}
 
       {/* mid-workout commander line — appears once past halfway, before all done */}
       {doneSets >= Math.ceil(totalSets / 2) && !allDone && (

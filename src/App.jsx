@@ -20,6 +20,7 @@ import { RANKS } from "./domain/entities/Rank.js";
 import { programFor } from "./data/repositories/LocalProgramRepository.js";
 import { todaysSession } from "./domain/useCases/GetSession.js";
 import ProvingGround from "./presentation/screens/ProvingGround.jsx";
+import Manuscript from "./presentation/screens/Manuscript.jsx";
 import { emptyRecord, addSession, addOrderHeld } from "./domain/entities/Record.js";
 import { defaultOrders, toggleOrder, ordersHeldToday } from "./domain/entities/StandingOrder.js";
 import { roomComplete, overallRank, theWall } from "./domain/useCases/ScoreAssessment.js";
@@ -216,11 +217,16 @@ export default function App() {
           override={dev.override}
           setOverride={setOverride}
           onOpenSession={() => setScreen("session")}
+          onReview={() => setScreen("manuscript")}
           onBack={() => setScreen("profile")}
           onDisable={() => { storage.saveDev(null); setDev(null); setScreen("profile"); }} />
       )}
 
-      {dev?.enabled && screen !== "proving" && (
+      {screen === "manuscript" && dev?.enabled && (
+        <Manuscript onBack={() => setScreen("proving")} />
+      )}
+
+      {dev?.enabled && screen !== "proving" && screen !== "manuscript" && (
         <button
           onClick={() => setScreen("proving")}
           style={{ position: "fixed", right: 12, bottom: 12, zIndex: 50, minHeight: 44, minWidth: 44,

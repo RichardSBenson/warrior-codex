@@ -24,7 +24,7 @@ const btn = (active) => ({
  *
  * Reached with ?dev=1 and switched off from inside. Invisible otherwise.
  */
-export function ProvingGround({ override, setOverride, onOpenSession, onBack, onDisable }) {
+export function ProvingGround({ override, setOverride, onOpenSession, onReview, onBack, onDisable }) {
   const [rank, setRank] = useState(override?.rank || "Recruit");
   const [week, setWeek] = useState(override?.week || 1);
   const [day, setDay] = useState(override?.day || 1);
@@ -135,6 +135,9 @@ export function ProvingGround({ override, setOverride, onOpenSession, onBack, on
         </>
       )}
 
+      <button style={{ ...btn(false), width: "100%", marginBottom: 10 }} onClick={onReview}>
+        READ THE MANUSCRIPT
+      </button>
       <button style={{ ...btn(false), width: "100%", marginBottom: 10 }}
         onClick={() => { setOverride(null); onBack(); }}>
         CLEAR OVERRIDE AND RETURN

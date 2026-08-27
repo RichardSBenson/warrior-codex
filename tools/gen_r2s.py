@@ -33,8 +33,8 @@ blocks.append({"weeks":[12],"phase":"Test","label":"Test Week","test":True,
 
 json.dump({"id":"recruit-to-soldier","fromRank":"Recruit","toRank":"Soldier","weeks":12,
   "sessionsPerWeek":6,
-  "warmUp":"5 minutes Surya Namaskar, then 3 minutes dynamic stretching. Non-negotiable.",
-  "coolDown":"3 minutes static stretching, then 2 minutes controlled breathing.",
+  "warmUp":{"steps": [{"name": "Surya Namaskar", "seconds": 300, "cue": "Flow through the sequence. Breathe with the movement, do not rush it."}, {"name": "Dynamic Stretching", "seconds": 180, "cue": "Leg swings, arm circles, hip openers. Keep moving \u2014 nothing static yet."}], "note": "Non-negotiable. Every program in the Codex opens this way."},
+  "coolDown":{"steps": [{"name": "Static Stretching", "seconds": 180, "cue": "Hold each stretch. Do not bounce."}, {"name": "Controlled Breathing", "seconds": 120, "cue": "In for four, out for eight. Slow the exhale, slow the mind."}], "note": ""},
   "source":"warrior_codex_recruit_to_soldier_12week — parsed, not transcribed",
   "blocks":blocks}, open('/home/claude/codex/src/data/sources/recruitToSoldier.json','w'), indent=1)
 print("generated:", sum(len(b.get('days',[])) for b in blocks), "sessions")

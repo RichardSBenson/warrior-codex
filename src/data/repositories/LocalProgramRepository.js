@@ -6,6 +6,7 @@
 import recruitToSoldier from '../sources/recruitToSoldier.json';
 import soldierToWarrior from '../sources/soldierToWarrior.json';
 import exercises from '../sources/exercises.json';
+import suryaNamaskar from '../sources/suryaNamaskar.json';
 
 const PROGRAMS = { Recruit: recruitToSoldier, Soldier: soldierToWarrior };
 
@@ -18,4 +19,8 @@ const BY_ID = Object.fromEntries(exercises.map((e) => [e.id, e]));
 export const exerciseById = (id) => BY_ID[id] || null;
 export const allExercises = () => exercises;
 
-export default { programFor, allPrograms, exerciseById, allExercises };
+const SEQUENCES = { surya: suryaNamaskar };
+
+export const sequenceFor = (id) => SEQUENCES[id] || null;
+
+export default { programFor, sequenceFor, allPrograms, exerciseById, allExercises };
