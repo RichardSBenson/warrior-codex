@@ -1,35 +1,17 @@
 {
-  "name": "warrior-codex",
+  "name": "honbu",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
+  "engines": { "node": "22.x" },
+  "optionalDependencies": { "pg": "^8.13.1" },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "lint": "eslint \"src/**/*.{js,jsx}\"",
-    "check": "npm run lint && npm test"
-  },
-  "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/react": "^16.3.2",
-    "eslint": "^8.57.1",
-    "eslint-plugin-react": "^7.37.5",
-    "jsdom": "^30.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/react": "^16.0.1",
-    "@vitejs/plugin-react": "^4.2.1",
-    "jsdom": "^25.0.1",
-    "vite": "^5.1.0",
-    "vite-plugin-pwa": "^0.19.0",
-    "vitest": "^2.1.1",
-    "eslint": "^8.57.1",
-    "eslint-plugin-react": "^7.37.2"
+    "db": "psql -f db/schema.sql && psql -f db/seed-moknz.sql",
+    "test": "cd packages/brand && node test.mjs && cd ../content && node test.mjs && cd ../api && node test.mjs && node test-pages.mjs && node test-auth.mjs && node test-server.mjs && cd ../wallet && node test.mjs && cd ../site && node build.mjs && node verify.mjs",
+    "build": "node packages/site/build.mjs",
+    "export": "node tools/export-to-json.mjs",
+    "check": "node tools/check-dependencies.mjs",
+    "export": "node tools/export-to-json.mjs",
+    "check": "node tools/check-dependencies.mjs",
+    "dev": "node packages/api/server.mjs"
   }
 }
